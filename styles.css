@@ -74,7 +74,7 @@ a:hover {
 }
 
 button, .btn {
-    background-color: var(--primary);
+    background-color: var(--secondary);
     min-height: 44px;
 }
 
