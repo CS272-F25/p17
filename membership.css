@@ -1,0 +1,41 @@
+.membership_info_lists{
+    border-style: solid;
+    border-color: black;
+    border-width: 5px; 
+    background-color:darkgoldenrod;
+    height: 325px;
+}
+
+.membership_about_buttons{
+    width: 13.5rem;
+}
+
+.leadershipButtons{
+    width: 13.5rem;
+}
+
+.responsibilities_lists{
+    border-style: solid;
+    border-color: bl;
+}
+
+h1 {
+    margin: 0 auto; 
+    text-align: center;
+    background-color: var(--text);
+    width:30rem;
+}
+
+p{
+    margin: 20px;
+}
+
+#membership_form_div{
+    background-color: var(--primary);
+}
+
+#submit_button{
+    width: 25%;
+
+}
+
