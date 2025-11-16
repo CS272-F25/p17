@@ -2,17 +2,21 @@
     color-scheme: light;
   --text: #050316;
   --background: #dfd9d8;
-  --primary: #b54547;
-  --secondary: #fc8d8d;
-  --accent: #65242f;
+  --primary: #64242F;
+  --secondary: #B44446;
+  --accent: #FC8F8F;
 }
 :root[data-theme="dark"] {
     color-scheme: dark;
   --text: #eae9fc;
   --background: #272120;
-  --primary: #ba4a4c;
-  --secondary: #720303;
-  --accent: #db9aa5;
+  --primary: #db9aa5;
+  --secondary: #ba4a4c;
+  --accent: #720303;
+}
+
+:root, body, nav, button, a, h1, h2, h3, h4, h5, h6, #theme-switch {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 *{
@@ -24,6 +28,32 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.custom-nav {
+    background: var(--background);
+    border-bottom: 2px solid var(--primary);
+    padding: 1rem;
+}
+
+.logo img {
+    height: 3.5rem;
+    width: auto;
+}
+
+.custom-nav .nav-link{
+    color: var(--text);
+    font-weight: 600;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
+
+.custom-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.custom-toggler {
+    border-color: var(--primary);
+}
+
 body {
     background-color: var(--background);
     color: var(--text);
@@ -32,11 +62,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: normal;
-    color: var(--primary);
+    color: var(--text);
 }
 
 a {
-    color: var(--accent);
+    color: var(--text);
 }
 
 a:hover {
@@ -46,12 +76,11 @@ a:hover {
 button, .btn {
     background-color: var(--primary);
     min-height: 44px;
-    
 }
 
 #theme-switch {
-    height: 50px;
-    width: 50px;
+    height: 3rem;
+    width: 3rem;
     padding: 0;
     border-radius: 50%;
     background-color: var(--background);
@@ -59,8 +88,9 @@ button, .btn {
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 200;
 }
 
 #theme-switch svg {
@@ -74,3 +104,4 @@ button, .btn {
 :root[data-theme='dark'] .icon-moon {
     display: none;
 }
+
