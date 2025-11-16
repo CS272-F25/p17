@@ -2,17 +2,17 @@
     color-scheme: light;
   --text: #050316;
   --background: #dfd9d8;
-  --primary: #b54547;
-  --secondary: #fc8d8d;
-  --accent: #65242f;
+  --primary: #64242F;
+  --secondary: #B44446;
+  --accent: #FC8F8F;
 }
 :root[data-theme="dark"] {
     color-scheme: dark;
   --text: #eae9fc;
   --background: #272120;
-  --primary: #ba4a4c;
-  --secondary: #720303;
-  --accent: #db9aa5;
+  --primary: #db9aa5;
+  --secondary: #ba4a4c;
+  --accent: #720303;
 }
 
 :root, body, nav, button, a, h1, h2, h3, h4, h5, h6, #theme-switch {
@@ -28,13 +28,10 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 1.5rem;
-    background-color: var(--background);
+.custom-nav {
+    background: var(--background);
     border-bottom: 2px solid var(--primary);
+    padding: 1rem;
 }
 
 .logo img {
@@ -42,20 +39,19 @@ nav {
     width: auto;
 }
 
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-    margin-left: 1.5rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--accent);
+.custom-nav .nav-link{
+    color: var(--text);
     font-weight: 600;
+    margin-left: 1.5rem;
+    text-decoration: none;
 }
 
-.nav-links a.active {
-    color:var(--primary);
+.custom-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.custom-toggler {
+    border-color: var(--primary);
 }
 
 body {
@@ -66,11 +62,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: normal;
-    color: var(--primary);
+    color: var(--text);
 }
 
 a {
-    color: var(--accent);
+    color: var(--text);
 }
 
 a:hover {
@@ -80,7 +76,6 @@ a:hover {
 button, .btn {
     background-color: var(--primary);
     min-height: 44px;
-    
 }
 
 #theme-switch {
@@ -110,19 +105,3 @@ button, .btn {
     display: none;
 }
 
-.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: .3rem;
-    background: none;;
-    border: none;
-    padding: 0.25;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 1.8rem;
-    height: 3px;
-    background: var(--primary);
-}
