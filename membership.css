@@ -22,7 +22,7 @@
 h1 {
     margin: 0 auto; 
     text-align: center;
-    background-color: var(--text);
+    background-color: var(--accent);
     width:30rem;
 }
 
@@ -31,7 +31,7 @@ p{
 }
 
 #membership_form_div{
-    background-color: var(--primary);
+    background-color: var(--secondary);
 }
 
 #submit_button{
