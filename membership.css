@@ -2,8 +2,15 @@
     border-style: solid;
     border-color: black;
     border-width: 5px; 
-    background-color:darkgoldenrod;
+    background-color:rgba(216, 193, 152, 0.549);
     height: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5px;
+    box-shadow: 5px 5px 10px;
+    border-radius: 15px;
 }
 
 .membership_about_buttons{
@@ -16,7 +23,16 @@
 
 .responsibilities_lists{
     border-style: solid;
-    border-color: bl;
+    width: 17rem;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color:rgba(216, 193, 152, 0.549);
+    box-shadow: 5px 5px 10px;
+    border-radius: 15px;
 }
 
 h1 {
@@ -25,6 +41,8 @@ h1 {
     background-color: var(--accent);
     width:30rem;
 }
+
+
 
 p{
     margin: 20px;
@@ -37,5 +55,9 @@ p{
 #submit_button{
     width: 25%;
 
+}
+
+.leadership_images{
+    height: 250px;
 }
 

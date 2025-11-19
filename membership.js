@@ -41,7 +41,7 @@ rightsButton.addEventListener("click", () => {
 // End of goals, what we do, and rights clickable buttons
 
 
-// Start of Membership form functionality Note to self: I need to make this not clicked by default
+// Start of Membership form functionality 
 const membershipFormSubmissionButton = document.getElementById("submit_button"); 
 const membershipForm = document.getElementById("membership_form"); 
 const membershipFormDiv = document.getElementById("membership_form_div");
@@ -91,7 +91,7 @@ presidentButton.addEventListener("click", () => {
     }
     else {
         presidentResponsibilities.className = "d-none" 
-        presidentImage.className = "d-flex"; 
+        presidentImage.className = "d-flex m-4 leadership_images"; 
     }
 }) 
 
@@ -107,7 +107,7 @@ secretaryButton.addEventListener("click", () => {
     }
     else {
         secretaryResponsibilities.className = "d-none" 
-        secretaryImage.className = "d-flex"; 
+        secretaryImage.className = "d-flex m-4 leadership_images"; 
     }
 }) 
 
@@ -124,7 +124,7 @@ financeButton.addEventListener("click", () => {
     }
     else {
        financeResponsibilities.className = "d-none" 
-        financeImage.className = "d-flex"; 
+        financeImage.className = "d-flex m-4 leadership_images"; 
     }
 }) 
 
@@ -141,7 +141,7 @@ marketingButton.addEventListener("click", () => {
     }
     else {
         marketingResponsibilities.className = "d-none" 
-        marketingImage.className = "d-flex"; 
+        marketingImage.className = "d-flex m-4 leadership_images"; 
     }
 }) 
 
@@ -157,7 +157,7 @@ programmingButton.addEventListener("click", () => {
     }
     else {
         programmingResponsibilities.className = "d-none" 
-        programmingImage.className = "d-flex"; 
+        programmingImage.className = "d-flex m-4 leadership_images";
     }
 }) 
 
