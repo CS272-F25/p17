@@ -35,10 +35,13 @@ class MyHeader extends HTMLElement {
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="membership.html">Membership</a>
+                                    <a class="nav-link" href="recipes.html">Recipes</a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="shopping-list.html">Shopping List</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="shopping-list.html">Shopping List</a>
+                                    <a class="nav-link" href="membership.html">Membership</a>
                                 </li>
                             </ul>
                         </div>
