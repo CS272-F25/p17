@@ -1,0 +1,385 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: #faf7f5;
+  color: #333;
+}
+
+/* heading */
+
+.recipe-header {
+  max-width: 1100px;
+  margin: 1.5rem auto 1rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.back-link:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+.recipe-title-main {
+  font-size: 2rem;
+  margin: 0.25rem 0 0.4rem;
+}
+
+.overview-description {
+  margin: 0.3rem auto 0;
+  max-width: 720px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7; 
+  text-align: left;  
+  padding-inline: 1.5rem;
+}
+
+.recipe-layout {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 2.5rem;
+}
+
+/* outline nav on the left*/
+
+.recipe-outline {
+  position: sticky;
+  top: 5rem;
+  align-self: flex-start;
+  z-index: 20;
+  width: 140px;
+  flex-shrink: 0; 
+  box-sizing: border-box;
+}
+
+.outline-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 20px; 
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.outline-item {
+  border: none;
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+  color: #666;
+  transition: all 0.18s ease;
+}
+
+.outline-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.outline-item--active {
+  background: #ff7e67;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* content on the right */
+
+.recipe-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.recipe-section {
+  margin-bottom: 2.3rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.9rem;
+}
+
+/* overview*/
+
+.overview-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  align-items: stretch;
+}
+
+.overview-hero {
+  border-radius: 18px;
+  overflow: hidden;
+  flex: 1 1 48%;
+}
+
+.overview-hero img {
+  width: 100%;
+  height: auto;       
+  max-height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.overview-right {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+/* meta: yield & time */
+
+.overview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.meta-chip i {
+  font-size: 0.9rem;
+  color: #ff7e67;
+}
+
+/* tags */
+
+.overview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag-pill {
+  font-size: 0.8rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #ffe8de;
+  color: #b65236;
+}
+
+/* Ingredients */
+
+.ingredients-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.ingredients-list {
+  flex: 2 1 260px;
+}
+
+.ingredients-list ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.ingredients-list li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.7; 
+}
+
+.ingredients-image {
+  flex: 1 1 240px;
+  max-width: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.ingredients-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Instructions */
+
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+.instruction-step {
+  padding: 1.1rem 1rem;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.instruction-step--single-media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.instruction-step-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.instruction-step--single-media .instruction-step-header {
+  flex: 1 1 55%;
+}
+
+.step-number {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ff7e67;
+  flex-shrink: 0;
+}
+
+.step-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* multiple image below text */
+.step-media-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+
+.instruction-step--multi-media .step-media-row {
+  justify-content: center;
+}
+
+/* single image on the right */
+.instruction-step--single-media .step-media-row {
+  flex: 1 1 40%;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.step-media-item {
+  flex: 1 1 180px;
+  max-width: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.step-media-item img {
+  width: 100%;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Notes */
+
+.notes-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.notes-list li {
+  margin-bottom: 0.3rem;
+}
+
+/* error */
+
+.recipe-error {
+  color: #b00020;
+  font-size: 0.95rem;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+  .recipe-layout {
+    flex-direction: column;
+  }
+
+  .recipe-outline {
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;  
+    z-index: 30;
+    margin-bottom: 0.75rem;
+    padding-top: 0.3rem;
+    justify-content: center;
+  }
+
+  .outline-nav {
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0.4rem 0.6rem;
+    justify-content: center;
+  }
+
+  .outline-item {
+    white-space: nowrap;
+  }
+
+  .overview-layout {
+    flex-direction: column;
+  }
+
+  .instruction-step--single-media {
+    flex-direction: column;  
+  }
+
+  .instruction-step--single-media .step-media-row {
+    margin-top: 0.7rem;
+    justify-content: center; 
+  }
+}
+
+@media (max-width: 600px) {
+    
+  .recipe-title-main {
+    font-size: 1.6rem;
+  }
+  
+
+  .overview-hero img {
+    max-height: 260px;
+  }
+
+  .instruction-step {
+    padding: 0.9rem 0.8rem;
+  }
+}

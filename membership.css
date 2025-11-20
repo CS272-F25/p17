@@ -54,10 +54,14 @@ p{
 
 #submit_button{
     width: 25%;
-
+    color: white; 
 }
 
 .leadership_images{
     height: 250px;
+}
+
+label{
+    color:white; 
 }
 

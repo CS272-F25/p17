@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipes</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="recipes.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="header-footer.js" defer></script>
+</head>
+
+<body>
+
+  <header class="recipes-header">
+    <h1>Recipes</h1>
+    <p class="subtitle">Browse our recipes</p>
+  </header>
+
+  <main class="recipes-page">
+    <section class="toolbar">
+      <input id="search-input" class="search-input" placeholder="Search..." />
+
+      <label class="favorite-filter">
+        <input type="checkbox" id="show-liked-only" />
+        Favorites only
+      </label>
+      
+      <div id="tag-filter" class="tag-filter"></div>
+    </section>
+
+    <section id="recipes-grid" class="recipes-grid"></section>
+  </main>
+
+  <script src="recipes.js"></script>
+</body>
+</html>
+
