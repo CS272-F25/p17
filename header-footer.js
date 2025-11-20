@@ -1,0 +1,71 @@
+// Header and Navigation
+class MyHeader extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <header class="site-header">
+                <!--Navigation-->
+                <nav class="navbar navbar-expand-lg custom-nav">
+                    <div class="container-fluid">
+                        <a class="navbar-brand brand-logo" href="index.html">
+                            <img src="club-logo.png" alt="Baking Club Logo" class="logo-img">
+                                <span class="brand-logo__text"> Baking Club</span>
+                        </a>
+                        <!--Hamburger Menu-->
+                        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--Theme Toggle-->
+                        <button id="theme-switch" aria-label="Toggle theme">
+                            <svg class='icon-moon' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                width="24px" fill="#e3e3e3">
+                                <path
+                                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z" />
+                            </svg>
+                            <svg class='icon-sun' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                width="24px" fill="#e3e3e3">
+                                <path
+                                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z" />
+                            </svg>
+                        </button>
+                        <!--Collapsable Menu-->
+                        <div class="collapse navbar-collapse" id="mainNav">
+                            <ul class="navbar-nav ms-auto custom-nav-links">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="membership.html">Membership</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="shopping-list.html">Shopping List</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            `
+        const navLinkEls = document.querySelectorAll('.nav-link');
+        const windowPathname = window.location.pathname;
+        navLinkEls.forEach(navLinkEl => {
+            const navLinkPathname = new URL(navLinkEl.href).pathname;
+
+            if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
+                navLinkEl.classList.add('active');
+            }
+        });
+    }
+}
+customElements.define('my-header', MyHeader);
+
+class MyFooter extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <footer>
+            
+        </footer>
+        `
+    }
+}
+customerElements.define('my-footer', MyFooter)
