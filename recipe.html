@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recipe</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="recipe.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  >
+</head>
+
+<body>
+  <header class="recipe-header">
+    <a href="recipes.html" class="back-link">
+      ← Back to recipes
+    </a>
+    <h1 id="recipe-title" class="recipe-title-main"></h1>
+    
+  </header>
+
+  <main class="recipe-layout">
+    <aside class="recipe-outline" aria-label="Recipe outline">
+      <nav class="outline-nav">
+        <button class="outline-item outline-item--active" data-target="overview">
+          Overview
+        </button>
+        <button class="outline-item" data-target="ingredients">
+          Ingredients
+        </button>
+        <button class="outline-item" data-target="instructions">
+          Instructions
+        </button>
+        <button class="outline-item" data-target="notes">
+          Notes
+        </button>
+      </nav>
+    </aside>
+
+    <article class="recipe-content">
+      <section id="overview" class="recipe-section">
+        <h2 class="section-title">Overview</h2>
+        <div class="overview-layout">
+          <div id="overview-hero" class="overview-hero"></div>
+          <div class="overview-right">
+            <div id="overview-meta" class="overview-meta"></div>
+            <p id="overview-description" class="overview-description"></p>
+            <div id="overview-tags" class="overview-tags"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ingredients -->
+      <section id="ingredients" class="recipe-section">
+        <h2 class="section-title">Ingredients</h2>
+        <div id="ingredients-wrapper" class="ingredients-wrapper"></div>
+      </section>
+
+      <!-- Instructions -->
+      <section id="instructions" class="recipe-section">
+        <h2 class="section-title">Instructions</h2>
+        <div id="instructions-list" class="instructions-list"></div>
+      </section>
+
+      <!-- Notes -->
+      <section id="notes" class="recipe-section">
+        <h2 class="section-title">Notes</h2>
+        <ul id="notes-list" class="notes-list"></ul>
+      </section>
+
+      <!-- Error message -->
+      <p id="recipe-error" class="recipe-error" hidden></p>
+
+    </article>
+  </main>
+
+  <script src="recipe.js"></script>
+</body>
+</html>
+
+
