@@ -1,0 +1,806 @@
+[
+  {
+    "id": "strawberry-pie",
+    "title": "Fresh Strawberry Pie",
+    "image": {
+      "src": "images/recipes/strawberry_pie/hero.jpg",
+      "alt": "A whole fresh strawberry pie set in a pretzel crumb crust, filled with glossy strawberry halves and garnished with mint leaves."
+    },
+    "description": "This Fresh Strawberry Pie is one of the best ways to show off those sweet summer strawberries. This recipe is made without jello and pairs the strawberries with a pretzel-pecan crust for a slice of pie inspired by strawberry-pretzel salad.",
+    "tags": ["dessert", "fruit", "summer", "pie"],
+    "yield": "1 (9-inch) pie, Servings: 8",
+    "time": {
+      "Prep Time": "30 minutes",
+      "Chill Time": "2 hours",
+      "Total Time": "2 hours 30 minutes"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/strawberry_pie/ingredients.jpg",
+      "alt": "Fresh whole strawberries in a large white bowl surrounded by small bowls of sugar, cornstarch, water, and vanilla extract arranged on a cloth-covered surface."
+    },
+    "ingredients": [
+      { "name": "graham cracker crumbs", "amount": 1, "unit": "cup" },
+      { "name": "pretzels, coarsely chopped", "amount": 0.5, "unit": "cup" },
+      { "name": "pecans, coarsely chopped", "amount": 0.5, "unit": "cup" },
+      { "name": "granulated sugar (for crust)", "amount": 0.25, "unit": "cup" },
+      { "name": "unsalted butter, melted", "amount": 8, "unit": "tablespoons" },
+      { "name": "fresh strawberries, tops removed (divided use)", "amount": 2, "unit": "pounds" },
+      { "name": "granulated sugar (for filling)", "amount": 0.75, "unit": "cup" },
+      { "name": "boiling water", "amount": 0.33, "unit": "cup" },
+      { "name": "cornstarch", "amount": 3, "unit": "tablespoons" },
+      { "name": "vanilla extract", "amount": 1, "unit": "teaspoon" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "In a medium bowl, stir together the graham cracker crumbs, chopped pretzels, pecans, and sugar. Stir in the melted butter until well combined. Press the mixture into the bottom and ½ inch up the sides of a greased 9-inch springform pan. Set in the refrigerator to chill while preparing the filling.",
+        "media": [
+            {
+                "src": "images/recipes/strawberry_pie/step1_1.jpg",
+                "alt": "A glass bowl containing crushed pretzels mixed with sugar and butter to form a coarse pie crust mixture."
+            },
+            {
+                "src": "images/recipes/strawberry_pie/step1_2.jpg",
+                "alt": "A hand using a metal measuring cup to press a pretzel crumb crust firmly into the bottom and sides of a springform pan."
+            }
+        ]
+      },
+      {
+        "step": 2,
+        "text": "Place 1 ½ cups of the berries into the bowl of a food processor or blender and puree. Add the sugar, boiling water, and cornstarch and blend until smooth.",
+        "media": []
+      },
+      {
+        "step": 3,
+        "text": "Pour the mixture into a medium saucepan and bring to a boil over medium heat, stirring constantly. Once the mixture starts to boil, continue to boil for 3 minutes, stirring constantly. The mixture will be very thick and should become less cloudy and more jam-like as it cooks.",
+        "media": []
+      },
+      {
+        "step": 4,
+        "text": "After 3 minutes, remove from the heat. Stir in the vanilla extract and allow the glaze to cool while you prepare the rest of the strawberries.",
+        "media": [
+            {
+                "src": "images/recipes/strawberry_pie/step4.jpg",
+                "alt": "A saucepan filled with smooth, thickened strawberry glaze, with a spatula resting inside the pot."
+            }
+        ]
+      },
+      {
+        "step": 5,
+        "text": "Cut the remaining strawberries depending on their size - cut very large berries into eighths, and smaller berries into quarters or halves. (See note)",
+        "media": []
+      },
+      {
+        "step": 6,
+        "text": "Stir the cut strawberries into the glaze and pour into the prepared crust. If desired, arrange the strawberries cut-side down.",
+        "media": [
+            {
+                "src": "images/recipes/strawberry_pie/step6.jpg",
+                "alt": "A white mixing bowl filled with cut strawberries coated in a glossy strawberry glaze, with a spatula resting inside."
+            }
+        ]
+      },
+      {
+        "step": 7,
+        "text": "Chill the pie for 2 hours, until the glaze has set.",
+        "media": [
+            {
+                "src": "images/recipes/strawberry_pie/step7.jpg",
+                "alt": "A whole strawberry pie with a pretzel crumb crust and glossy fresh strawberry filling, garnished with small mint leaves. One slice has been removed, revealing the crust and filling inside."
+            }
+        ]
+      },
+      {
+        "step": 8,
+        "text": "Keep the pie chilled until ready to serve. Pie is best served the same day it is made. Serve with fresh whipped cream.",
+        "media": [
+            {
+                "src": "images/recipes/strawberry_pie/step8.jpg",
+                "alt": "A slice of fresh strawberry pie topped with a swirl of whipped cream and a mint sprig, served on a dark plate with a fork. Whole and halved strawberries sit in the background."
+            }
+        ]
+      }
+    ],
+    "notes": [
+      "You can leave berries whole, but slicing makes the pie easier to serve.",
+      "Serve with fresh whipped cream.",
+      "Adapted from My Baking Addiction: https://www.mybakingaddiction.com/fresh-strawberry-pie/"
+    ]
+  },
+  {
+    "id": "salted-caramel-chocolate-chip-cookies",
+    "title": "Salted Caramel Chocolate Chip Cookies",
+    "image": {
+      "src": "images/recipes/chocolate_chip_cookies/hero.jpg",
+      "alt": "Stacked salted caramel chocolate chip cookies on a white plate, showing golden edges, melted chocolate pockets, and caramel bits, with blurred cookies and a jar of caramel sauce in the background."
+    },
+    "description": "Salted caramel chocolate chip cookies packed with caramel bits and dark chocolate chips, finished with a sprinkle of flaky sea salt for the perfect sweet-and-salty bite.",
+    "tags": ["dessert", "cookies", "chocolate", "caramel"],
+    "yield": "24 cookies",
+    "time": {
+      "Prep Time": "45 minutes",
+      "Cook Time": "16 minutes",
+      "Chilling Time": "1 day",
+      "Total Time": "1 day 1 hour 1 minute"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/chocolate_chip_cookies/ingredients.jpg",
+      "alt": "An overhead display of cookie ingredients arranged in bowls, including flour, sugar, brown sugar, butter, chocolate chips, caramel bits, eggs, vanilla extract, and baking ingredients."
+    },
+    "ingredients": [
+      { "name": "cake flour", "amount": 2, "unit": "cups minus 2 tablespoons" },
+      { "name": "bread flour", "amount": 1.67, "unit": "cups" },
+      { "name": "baking soda", "amount": 1.25, "unit": "teaspoons" },
+      { "name": "baking powder", "amount": 1.5, "unit": "teaspoons" },
+      { "name": "kosher salt", "amount": 1.5, "unit": "teaspoons" },
+      { "name": "unsalted butter", "amount": 1.25, "unit": "cups" },
+      { "name": "light brown sugar, packed", "amount": 1.25, "unit": "cups" },
+      { "name": "granulated sugar", "amount": 1, "unit": "cup plus 2 tablespoons" },
+      { "name": "large eggs", "amount": 2, "unit": "" },
+      { "name": "pure vanilla extract", "amount": 2, "unit": "teaspoons" },
+      { "name": "dark or semi-sweet chocolate chips", "amount": 1, "unit": "bag" },
+      {
+        "name": "Kraft Caramel Bits or caramel baking chips",
+        "amount": 1,
+        "unit": "heaping cup"
+      },
+      { "name": "flaky sea salt, for topping", "amount": null, "unit": "" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "Sift or whisk together the cake flour, bread flour, baking soda, baking powder, and kosher salt in a bowl. Set the dry mixture aside.",
+        "media": [
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step1.jpg",
+            "alt": "A mixing bowl filled with pale, fluffy creamed butter and sugar, with an electric hand mixer resting on the edge after beating."
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "text": "In a mixer fitted with the paddle attachment, beat the butter, brown sugar, and granulated sugar on medium speed until very light and fluffy, about 5 minutes.",
+        "media": []
+      },
+      {
+        "step": 3,
+        "text": "Add the eggs one at a time, mixing well after each addition, then blend in the vanilla extract.",
+        "media": []
+      },
+      {
+        "step": 4,
+        "text": "Reduce the mixer speed to low and add the dry ingredients. Mix just until the flour is incorporated, about 5 to 10 seconds, without overmixing.",
+        "media": []
+      },
+      {
+        "step": 5,
+        "text": "Add the chocolate chips and caramel bits and mix on low speed just until they are evenly distributed throughout the dough.",
+        "media": [
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step5_1.jpg",
+            "alt": "A bowl of cookie dough showing a smooth, thick texture after the wet and dry ingredients have been fully mixed together."
+          },
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step5_2.jpg",
+            "alt": "A bowl of light-colored cookie dough just after mixing, ready for chocolate chips and caramel bits to be added."
+          },
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step5_3.jpg",
+            "alt": "A bowl of cookie dough topped with semi-sweet chocolate chips and caramel bits, with a spatula ready to fold the mix-ins together."
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "text": "Press plastic wrap directly onto the surface of the dough and refrigerate for 24 to 36 hours. The dough can chill for up to 72 hours total.",
+        "media": []
+      },
+      {
+        "step": 7,
+        "text": "When you are ready to bake, remove the dough from the refrigerator and let it sit at room temperature for about 30 minutes to soften slightly.",
+        "media": []
+      },
+      {
+        "step": 8,
+        "text": "Preheat the oven to 350°F (175°C). Line a baking sheet with parchment paper or a nonstick baking mat.",
+        "media": []
+      },
+      {
+        "step": 9,
+        "text": "Scoop six 2-ounce balls of dough, about the size of golf balls, onto the prepared baking sheet. Sprinkle lightly with flaky sea salt and bake for 14 to 16 minutes, until golden brown but still soft in the center.",
+        "media": [
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step9.jpg",
+            "alt": "Six evenly spaced scoops of salted caramel chocolate chip cookie dough on a parchment-lined baking sheet before baking."
+          }
+        ]
+      },
+      {
+        "step": 10,
+        "text": "Place the baking sheet on a wire rack and cool the cookies for about 10 minutes, then transfer the cookies directly to the rack to finish cooling.",
+        "media": [
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step10.jpg",
+            "alt": "Freshly baked chocolate chip cookies cooling on a wire rack, sprinkled with flaky sea salt, with scattered chocolate chips and props around."
+          }
+        ]
+      },
+      {
+        "step": 11,
+        "text": "Repeat with the remaining dough, or keep the dough refrigerated and bake additional batches over the next day or so.",
+        "media": [
+          {
+            "src": "images/recipes/chocolate_chip_cookies/step11.jpg",
+            "alt": "A close-up view of a hand holding a cookie broken in half, revealing melted chocolate and soft caramel inside the warm cookie."
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Kraft caramel bits will firm up as the cookies cool but give a more classic caramel flavor than caramel baking chips.",
+      "For regular-sized cookies, use a heaping tablespoon of dough and bake for about 8–10 minutes.",
+      "Adapted from the New York Times chocolate chip cookies and My Baking Addiction: https://www.mybakingaddiction.com/salted-caramel-chocolate-chip-cookies/"
+    ]
+  },
+  {
+    "id": "blueberry-biscuits",
+    "title": "Blueberry Biscuits",
+    "image": {
+      "src": "images/recipes/blueberry_biscuits/hero.jpg",
+      "alt": "Two thick blueberry biscuit squares on a white plate, topped with fresh blueberries and shiny honey butter glaze, with bowls of blueberries, honey, and butter in the background."
+    },
+    "description": "Tall, fluffy blueberry biscuits are studded with juicy blueberries and finished with rich honey butter for a perfectly sweet start to the day. This easy recipe requires zero cutting or rolling.",
+    "tags": ["breakfast", "biscuits", "blueberry", "brunch"],
+    "yield": "9 biscuits",
+    "time": {
+      "Prep Time": "15 minutes",
+      "Cook Time": "40 minutes",
+      "Cooling Time": "15 minutes",
+      "Total Time": "1 hour 10 minutes"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/blueberry_biscuits/ingredients.jpg",
+      "alt": "An overhead view of ingredients for blueberry biscuits laid out in bowls, including flour, sugar, butter, blueberries, buttermilk, salt, and baking ingredients on a neutral countertop."
+    },
+    "ingredients": [
+      { "name": "unsalted butter, cold and divided use", "amount": 11, "unit": "tablespoons" },
+      { "name": "all-purpose flour", "amount": 3, "unit": "cups" },
+      { "name": "granulated sugar", "amount": 0.5, "unit": "cup" },
+      { "name": "baking powder", "amount": 2, "unit": "teaspoons" },
+      { "name": "baking soda", "amount": 0.5, "unit": "teaspoon" },
+      { "name": "fine sea salt", "amount": 1.25, "unit": "teaspoons" },
+      { "name": "fresh blueberries", "amount": 1.5, "unit": "cups" },
+      { "name": "cold buttermilk", "amount": 1.67, "unit": "cups" },
+      { "name": "unsalted butter (for honey butter)", "amount": 2, "unit": "tablespoons" },
+      { "name": "honey", "amount": 1, "unit": "tablespoon" },
+      { "name": "salt, for honey butter", "amount": 1, "unit": "pinch" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "Preheat the oven to 400°F. Place 1 tablespoon of the butter in an 8x8-inch baking pan and place it in the oven for about 3-5 minutes while the oven preheats. Once the butter is melted, brush it across the bottom and up the sides of the pan. Set aside.",
+        "media": []
+      },
+      {
+        "step": 2,
+        "text": "Cut the remaining butter into small pieces. Keep cold until you are ready to use it.",
+        "media": []
+      },
+      {
+        "step": 3,
+        "text": "In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt. Add the cold butter pieces; toss in the flour mixture, then use your fingertips to smash the butter into flat, irregular pieces.",
+        "media": [
+          {
+            "src": "images/recipes/blueberry_biscuits/step3.jpg",
+            "alt": "A large white mixing bowl filled with dry biscuit ingredients on a countertop, with a small bowl of fresh blueberries nearby."
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "text": "Add the blueberries and toss to combine. Gently stir in the buttermilk until no dry pockets of flour remain.",
+        "media": [
+          {
+            "src": "images/recipes/blueberry_biscuits/step4.jpg",
+            "alt": "A white mixing bowl filled with biscuit dough and fresh blueberries tossed throughout, with a spoon resting in the mixture."
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "text": "Transfer the dough to the prepared baking pan. Use a spatula to spread the dough evenly across the pan, including into the corners.",
+        "media": []
+      },
+      {
+        "step": 6,
+        "text": "Lightly spray a bench scraper with nonstick cooking spray and use it to score the dough into 9 equal squares, but do not separate.",
+        "media": [
+          {
+            "src": "images/recipes/blueberry_biscuits/step6.jpg",
+            "alt": "A metal pan filled with blueberry biscuit dough that has been spread evenly and lightly scored into nine squares."
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "text": "Bake for 40-45 minutes or until the tops of the biscuits are browned and a paring knife inserted into the center biscuit comes out clean. Let the biscuits cool for 5 minutes.",
+        "media": [
+          {
+            "src": "images/recipes/blueberry_biscuits/step7.jpg",
+            "alt": "A golden-brown slab of blueberry biscuits cooling on a wire rack, topped with a few fresh blueberries and a bowl of extra berries nearby."
+          }
+        ]
+      },
+      {
+        "step": 8,
+        "text": "Prepare the honey butter: In a small microwave-safe bowl, combine the butter, honey, and salt. Microwave until the butter is melted, 30-60 seconds, and stir to combine.",
+        "media": []
+      },
+      {
+        "step": 9,
+        "text": "After the biscuits have cooled for 5 minutes, turn them out onto a baking sheet, then flip them back onto a wire rack (they should be top-side up again). Brush the tops with all of the honey butter. Cool for an additional 10 minutes before using a serrated knife to cut the biscuits along the scored marks. Serve warm.",
+        "media": [
+          {
+            "src": "images/recipes/blueberry_biscuits/step9_1.jpg",
+            "alt": "A pan of baked blueberry biscuits on a cooling rack beside a small bowl of melted honey butter and a pastry brush."
+          },
+          {
+            "src": "images/recipes/blueberry_biscuits/step9_2.jpg",
+            "alt": "An overhead view of blueberry biscuits cut into squares on a cooling rack, with a bowl of honey and slices of butter arranged around them."
+          },
+          {
+            "src": "images/recipes/blueberry_biscuits/step9_3.jpg",
+            "alt": "A close-up of a blueberry biscuit square topped with a pat of butter while golden honey is being drizzled over the top."
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "If smashing the butter with your fingers is inaccessible for you, feel free to work the cold butter into the dry ingredients using a pastry blender or food processor until the mixture resembles coarse meal.",
+      "If you do not have fresh blueberries, you can use frozen instead. Do not thaw the frozen blueberries before adding them to the dry ingredients. Keep in mind that even while still frozen, they may still discolor the batter a bit more than fresh blueberries will.",
+      "Very slightly tweaked from America’s Test Kitchen via Reddit.",
+      "Blueberry Biscuits from My Baking Addiction: https://www.mybakingaddiction.com/blueberry-biscuits/"
+    ]
+  },
+  {
+    "id": "easy-pineapple-cake",
+    "title": "Easy Pineapple Cake",
+    "image": {
+      "src": "images/recipes/easy_pineapple_cake/hero.jpg",
+      "alt": "A slice of bright yellow pineapple cake topped with fluffy white pineapple frosting, garnished with pineapple pieces and mint, served on a white plate."
+    },
+    "description": "This incredibly easy pineapple cake is topped with a light and fluffy pineapple frosting for a simple, summery dessert that you can whip up any time.",
+    "tags": ["dessert", "fruit", "cake", "summer"],
+    "yield": "Servings: 16",
+    "time": {
+      "Prep Time": "10 minutes",
+      "Cook Time": "25 minutes",
+      "Cooling and Chilling Time": "4 hours",
+      "Total Time": "4 hours 35 minutes"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/easy_pineapple_cake/ingredients.jpg",
+      "alt": "An overhead view of the measured ingredients for pineapple cake arranged in small bowls, including cake mix, pudding mix, crushed pineapple, eggs, oil, Cool Whip, and marshmallow fluff."
+    },
+    "ingredients": [
+      { "name": "yellow cake mix (15.25 ounces)", "amount": 1, "unit": "box" },
+      { "name": "instant vanilla pudding mix (3.4 ounces, divided use)", "amount": 1, "unit": "box" },
+      { "name": "crushed pineapple (20 ounces, divided use)", "amount": 1, "unit": "can" },
+      { "name": "large eggs", "amount": 4, "unit": "" },
+      { "name": "vegetable oil", "amount": 0.5, "unit": "cup" },
+      { "name": "Cool Whip, thawed", "amount": 8, "unit": "ounces" },
+      { "name": "marshmallow fluff (7 ounces)", "amount": 1, "unit": "jar" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "Preheat oven to 350°F. Spray (1) 9x13-inch baking pan with nonstick cooking spray. Set aside.",
+        "media": []
+      },
+      {
+        "step": 2,
+        "text": "Add cake mix to a large bowl. Remove 2 tablespoons of dry vanilla pudding mix from the package and set aside. Add the remaining pudding mix to the cake mix and stir to combine.",
+        "media": [
+          {
+            "src": "images/recipes/easy_pineapple_cake/step2.jpg",
+            "alt": "A bowl of yellow cake mix whisked together with pudding mix, with a wire whisk resting inside."
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "text": "Remove half of the crushed pineapple and reserve. Do not drain the pineapple. Add the remaining crushed pineapple to the cake mix along with the eggs and oil. Mix on medium speed until completely combined.",
+        "media": [
+          {
+            "src": "images/recipes/easy_pineapple_cake/step3.jpg",
+           "alt": "A mixing bowl filled with bright yellow pineapple cake batter being stirred with a spatula."
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "text": "Pour batter into the prepared baking pan and bake in preheated oven for 25–30 minutes or until a toothpick inserted into the center of the cake comes out clean.",
+        "media": []
+      },
+      {
+        "step": 5,
+        "text": "Remove cake from the oven and allow to cool completely on a wire rack.",
+        "media": [
+          {
+            "src": "images/recipes/easy_pineapple_cake/step5.jpg",
+            "alt": "A golden pineapple cake freshly baked in a metal pan cooling on a wire rack."
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "text": "Once the cake has cooled completely, mix the Cool Whip and marshmallow fluff until thoroughly incorporated. Stir together the reserved pudding mix and reserved crushed pineapple, then fold this mixture into the Cool Whip mixture.",
+        "media": [
+          {
+            "src": "images/recipes/easy_pineapple_cake/step6_1.jpg",
+            "alt": "A bowl of creamy Cool Whip and marshmallow fluff mixture with a spatula resting inside."
+          },
+         {
+            "src": "images/recipes/easy_pineapple_cake/step6_2.jpg",
+            "alt": "Reserved crushed pineapple and pudding mix stirred together in a small bowl."
+          }
+        ]
+      },
+      {
+        "step": 7,
+        "text": "Spread the frosting on the cooled cake. Cover and refrigerate for at least 3 hours before serving.",
+        "media": [
+          {
+            "src": "images/recipes/easy_pineapple_cake/step7_1.jpg",
+            "alt": "Squares of pineapple cake topped with creamy pineapple frosting, some garnished with pineapple slices and mint."
+         },
+          {
+            "src": "images/recipes/easy_pineapple_cake/step7_2.jpg",
+            "alt": "A plated slice of pineapple cake with pineapple pieces and mint, served with a glass of milk."
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Store cake in the refrigerator for up to 3 days.",
+      "Adapted from My Baking Addiction: https://www.mybakingaddiction.com/easy-pineapple-cake/"
+    ]
+  },
+  {
+    "id": "easy-sauteed-apples",
+    "title": "Easy Sautéed Apples",
+    "image": {
+      "src": "images/recipes/sauteed_apples/hero.jpg",
+      "alt": "Warm sautéed apple slices coated in a glossy spiced brown sugar sauce, served in a shallow bowl with cinnamon sticks in the background."
+    },
+    "description": "Tart apples cooked to perfection with butter, brown sugar, and warm spices. These easy sautéed apples are perfect over ice cream, pancakes, cheesecake, or enjoyed on their own.",
+    "tags": ["dessert", "fruit", "easy", "apple", "stovetop"],
+    "yield": "Servings: 6",
+    "time": {
+      "Prep Time": "10 minutes",
+      "Cook Time": "15 minutes",
+      "Total Time": "25 minutes"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/sauteed_apples/ingredients.jpg",
+      "alt": "A top-down arrangement of Granny Smith apples, brown sugar, butter, vanilla, spices, cornstarch, and water in small bowls on a light countertop."
+    },
+    "ingredients": [
+      { "name": "unsalted butter", "amount": 0.25, "unit": "cup" },
+      { "name": "fine sea salt", "amount": 1, "unit": "pinch" },
+      { "name": "Granny Smith apples, peeled, cored, sliced 1/4-inch thick", "amount": 2, "unit": "pounds" },
+      { "name": "cold water", "amount": 0.5, "unit": "cup" },
+      { "name": "cornstarch", "amount": 2, "unit": "teaspoons" },
+      { "name": "light brown sugar, packed", "amount": 0.5, "unit": "cup" },
+      { "name": "apple pie spice", "amount": 0.5, "unit": "teaspoon" },
+      { "name": "cinnamon", "amount": 0.5, "unit": "teaspoon" },
+      { "name": "pure vanilla extract", "amount": 0.5, "unit": "teaspoon" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "In a large skillet over medium heat, melt the butter. Sprinkle in a pinch of sea salt. Add in the sliced apples and cook until they just begin to become tender; about 6-7 minutes.",
+        "media": [
+          {
+            "src": "images/recipes/sauteed_apples/step1.jpg",
+            "alt": "A skillet filled with sliced Granny Smith apples beginning to soften as they cook in melted butter."
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "text": "Mix the water and cornstarch together and pour over the apples. Add in the brown sugar, apple pie spice and cinnamon and mix until everything is combined. Allow the mixture to boil for 2-3 minutes, stirring occasionally until the perfect texture is achieved. Remove from the heat and stir in the vanilla.",
+        "media": [
+          {
+            "src": "images/recipes/sauteed_apples/step2_1.jpg",
+            "alt": "A measuring cup filled with a cornstarch slurry next to fresh green apples on a light surface."
+          },
+          {
+            "src": "images/recipes/sauteed_apples/step2_2.jpg",
+            "alt": "Apple slices simmering in a skillet with brown sugar and spices, forming a glossy sauce."
+          }
+        ]
+      },
+      {
+        "step": 3,
+        "text": "Serve warm over vanilla bean ice cream, cheesecake, waffles or pancakes.",
+        "media": [
+          {
+            "src": "images/recipes/sauteed_apples/step3_1.jpg",
+            "alt": "A spoon drizzling warm spiced apple sauce over vanilla ice cream topped with sautéed apples."
+          },
+          {
+            "src": "images/recipes/sauteed_apples/step3_2.jpg",
+            "alt": "A close-up of sautéed apple slices coated in cinnamon-brown sugar sauce on a wooden spoon."
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Recipe from My Baking Addiction.",
+      "Perfect served warm over desserts or breakfast dishes."
+    ]
+  },
+    {
+    "id": "bisquick-waffles",
+    "title": "Bisquick Waffles",
+    "image": {
+      "src": "images/recipes/bisquick_waffles/hero.jpg",
+      "alt": "Golden brown quartered waffles served on a white plate with fresh strawberries and pats of butter."
+    },
+    "description": "Bisquick Waffles come together in a snap for a simple weekend waffle breakfast. Make them with store-bought or homemade Bisquick mix and load them up with your favorite waffle toppings!",
+    "tags": ["easy", "breakfast"],
+    "yield": "8 large waffles",
+    "time": {
+      "Prep Time": "10 minutes",
+      "Cook Time": "30 minutes",
+      "Total Time": "40 minutes"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/bisquick_waffles/ingredients.jpg",
+      "alt": "Bowls and measuring cups holding flour, sugar, baking powder, milk, eggs, vanilla, and oil arranged on a light countertop next to a whisk."
+    },
+    "ingredients": [
+      { "name": "Homemade Bisquick", "amount": 2, "unit": "cups" },
+      { "name": "milk", "amount": 1, "unit": "cup" },
+      { "name": "large eggs", "amount": 2, "unit": "" },
+      { "name": "granulated sugar", "amount": 2, "unit": "tablespoons" },
+      { "name": "baking powder", "amount": 2, "unit": "teaspoons" },
+      { "name": "vegetable oil", "amount": 3, "unit": "tablespoons" },
+      { "name": "vanilla extract or vanilla bean paste", "amount": 1, "unit": "teaspoon" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "In a large bowl, stir together all ingredients just until combined. Let batter rest while your waffle maker preheats.",
+        "media": [
+          {
+            "src": "images/recipes/bisquick_waffles/step1.jpg",
+            "alt": "A mixing bowl filled with freshly whisked waffle batter with a whisk resting inside."
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "text": "Preheat waffle maker according to manufacturer directions.",
+        "media": []
+      },
+      {
+        "step": 3,
+        "text": "Lightly spray the cooking surface with nonstick spray. Scoop batter onto the bottom surface, being careful not to overfill. Close the lid and cook until golden brown.",
+        "media": [
+          {
+            "src": "images/recipes/bisquick_waffles/step3_1.jpg",
+            "alt": "Waffle maker filled with uncooked waffle batter spread evenly across the cooking surface."
+          },
+          {
+            "src": "images/recipes/bisquick_waffles/step3_2.jpg",
+            "alt": "Freshly cooked golden waffle inside an open waffle maker."
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "text": "Carefully remove each waffle and transfer to a baking sheet to keep warm or to a wire rack to cool completely before freezing.",
+        "media": [
+          {
+            "src": "images/recipes/bisquick_waffles/step4.jpg",
+            "alt": "Three whole round waffles cooling on a wire rack."
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "text": "Continue cooking with remaining batter, greasing the waffle maker with additional oil as needed.",
+        "media": [
+          {
+            "src": "images/recipes/bisquick_waffles/step5_1.jpg",
+            "alt": "A plate of golden waffles topped with sliced strawberries and butter, served with a jar of strawberry syrup."
+          },
+          {
+            "src": "images/recipes/bisquick_waffles/step5_2.jpg",
+            "alt": "Syrup being poured over stacked waffles topped with butter and strawberries."
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Makes about 8 large waffles.",
+      "You can substitute store-bought Bisquick for the homemade mix in this recipe.",
+      "Bisquick Waffles from My Baking Addiction: https://www.mybakingaddiction.com/bisquick-waffles/"
+    ]
+  },
+  {
+    "id": "pumpkin-cheesecake-balls",
+    "title": "No-Bake Pumpkin Cheesecake Balls",
+    "image": {
+      "src": "images/recipes/pumpkin_cheesecake_balls/hero.jpg",
+      "alt": "A white fluted plate filled with pumpkin cheesecake balls coated in white chocolate and sprinkled with cookie crumbs, surrounded by mini pumpkins, cinnamon sticks, and extra truffles on small plates."
+    },
+    "description": "These no-bake pumpkin cheesecake balls combine real pumpkin, Biscoff cookie crumbs, and tangy cream cheese, then get dipped in creamy white coating for truffle-like bites that are perfect for fall gatherings or holiday dessert trays.",
+    "tags": ["dessert", "pumpkin", "no-bake", "fall"],
+    "yield": "Servings: 20 balls",
+    "time": {
+      "Prep Time": "20 minutes",
+      "Cook Time": "0 minutes",
+      "Chilling and Freezing Time": "3 hours",
+      "Total Time": "3 hours 20 minutes"
+    },
+    "ingredientsImage": {
+      "src": "images/recipes/pumpkin_cheesecake_balls/ingredients.jpg",
+      "alt": "Cream cheese, pumpkin puree, powdered sugar, white melting wafers, butter, vanilla, pumpkin pie spice, salt, and a bowl of finely crushed Biscoff cookies arranged in small bowls on a light peach surface."
+    },
+    "ingredients": [
+      { "name": "cream cheese, softened", "amount": 8, "unit": "ounces" },
+      { "name": "canned pumpkin puree", "amount": 0.5, "unit": "cup" },
+      { "name": "powdered sugar", "amount": 0.33, "unit": "cup" },
+      { "name": "pure vanilla extract", "amount": 1, "unit": "teaspoon" },
+      { "name": "Biscoff cookies, crushed into fine crumbs (about 1 package)", "amount": 8.8, "unit": "ounces" },
+      { "name": "pumpkin pie spice", "amount": 1.5, "unit": "teaspoons" },
+      { "name": "fine sea salt", "amount": 0.25, "unit": "teaspoon" },
+      { "name": "Ghirardelli white vanilla melting wafers", "amount": 10, "unit": "ounces" },
+      { "name": "coconut oil or vegetable shortening", "amount": 2, "unit": "teaspoons" }
+    ],
+    "instructions": [
+      {
+        "step": 1,
+        "text": "In the bowl of a stand mixer fitted with the paddle attachment, or in a large bowl with a hand mixer, beat the cream cheese on medium speed for 1–2 minutes until smooth. Add the pumpkin puree, powdered sugar, and vanilla and mix until fully combined. Add the Biscoff cookie crumbs, pumpkin pie spice, and salt and mix on low speed until the crumbs are completely incorporated into the cream cheese mixture.",
+        "media": [
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step1_1.jpg",
+            "alt": "Softened cream cheese spread against the bottom and sides of a stainless steel mixing bowl with a gray spatula resting inside."
+          },
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step1_2.jpg",
+            "alt": "A stainless steel mixing bowl filled with a smooth orange pumpkin and cream cheese mixture being stirred with a gray spatula."
+          },
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step1_3.jpg",
+            "alt": "A thick pumpkin cheesecake mixture with Biscoff crumbs stirred in, clinging to the sides of a metal mixing bowl and a gray spatula."
+          }
+        ]
+      },
+      {
+        "step": 2,
+        "text": "Cover the bowl and refrigerate the pumpkin cheesecake mixture for at least 2 hours, until firm enough to scoop. Line a baking sheet with parchment paper while the mixture chills.",
+        "media": []
+      },
+      {
+        "step": 3,
+        "text": "Use a medium cookie scoop (about 1.5 tablespoons) to portion roughly 20 mounds of the chilled mixture. Roll each portion between your palms to form a smooth ball and place the balls on the parchment-lined baking sheet. Freeze the pumpkin cheesecake balls for 1 hour.",
+        "media": [
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step3.jpg",
+            "alt": "Rows of uncoated pumpkin cheesecake balls arranged on a parchment-lined baking sheet."
+          }
+        ]
+      },
+      {
+        "step": 4,
+        "text": "Combine the white vanilla melting wafers and coconut oil or shortening in a microwave-safe bowl or measuring cup and melt according to the package directions, stirring until smooth. Using a toothpick or skewer, dip each frozen ball into the melted coating, letting the excess drip back into the bowl, then place it back onto the parchment-lined baking sheet to set.",
+        "media": [
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step4.jpg",
+            "alt": "A pumpkin cheesecake ball on a skewer held above a measuring cup of melted white coating, with excess coating dripping back into the cup."
+          }
+        ]
+      },
+      {
+        "step": 5,
+        "text": "If desired, transfer some of the melted coating to a piping bag or zip-top bag and drizzle it over the coated balls. Immediately sprinkle the tops with Biscoff crumbs or sprinkles while the drizzle is still wet.",
+        "media": [
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step5_1.jpg",
+            "alt": "A hand holding a piping bag to drizzle white coating over rows of coated pumpkin cheesecake balls on a parchment-lined baking sheet."
+          },
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step5_2.jpg",
+            "alt": "Finished pumpkin cheesecake balls on a parchment-lined baking sheet, drizzled with white coating and topped with crushed Biscoff cookie crumbs."
+          }
+        ]
+      },
+      {
+        "step": 6,
+        "text": "Refrigerate the pumpkin cheesecake balls until the coating is fully set and keep chilled until ready to serve.",
+        "media": [
+          {
+            "src": "images/recipes/pumpkin_cheesecake_balls/step6.jpg",
+            "alt": "A close-up of pumpkin cheesecake balls coated in white chocolate, with one truffle bitten open to reveal the smooth pumpkin cookie center."
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "Store the pumpkin cheesecake balls in an airtight container in the refrigerator for up to 3 days or freeze for up to 2 months.",
+      "No-Bake Pumpkin Cheesecake Balls adapted from My Baking Addiction: https://www.mybakingaddiction.com/no-bake-pumpkin-cheesecake-balls/"
+    ]
+  },
+{
+  "id": "two-ingredient-pumpkin-bread",
+  "title": "2-Ingredient Pumpkin Bread",
+  "image": {
+    "src": "images/recipes/two_ingredient_pumpkin_bread/hero.jpg",
+    "alt": "Slices of moist pumpkin bread stacked on a white plate, with pumpkins and a glass of milk in the background."
+  },
+  "description": "Make the easiest quick bread of your life with this 2-ingredient pumpkin bread recipe. Kids and adults will love making this cozy fall bread, made simply with pumpkin puree and spice cake mix.",
+  "tags": ["bread", "fall", "pumpkin", "easy"],
+  "yield": "1 loaf, Servings: 10",
+  "time": {
+    "Prep Time": "10 minutes",
+    "Cook Time": "55 minutes",
+    "Total Time": "1 hour 5 minutes"
+  },
+
+  "ingredientsImage": {
+    "src": "images/recipes/two_ingredient_pumpkin_bread/ingredients.jpg",
+    "alt": "A bowl of pumpkin puree beside a small bowl of coarse sugar and a sealed bag of spice cake mix on a textured surface."
+  },
+
+  "ingredients": [
+    { "name": "Duncan Hines Spice Cake mix", "amount": 15.25, "unit": "ounces" },
+    { "name": "pure pumpkin puree", "amount": 15, "unit": "ounces" },
+    { "name": "cinnamon sugar or coarse sugar (optional)", "amount": null, "unit": null }
+  ],
+
+  "instructions": [
+    {
+      "step": 1,
+      "text": "Preheat oven to 350°F. Spray an 8½ x 4½-inch loaf pan with nonstick cooking spray and line with parchment paper.",
+      "media": []
+    },
+    {
+      "step": 2,
+      "text": "In a large bowl, combine the dry cake mix with the pumpkin puree until incorporated. Spoon the batter into the prepared pan and smooth the top. If desired, sprinkle generously with cinnamon sugar or coarse sugar.",
+      "media": [
+        {
+          "src": "images/recipes/two_ingredient_pumpkin_bread/step2_1.jpg",
+          "alt": "Pumpkin puree and spice cake mix in a mixing bowl before blending."
+        },
+        {
+          "src": "images/recipes/two_ingredient_pumpkin_bread/step2_2.jpg",
+          "alt": "Pumpkin bread batter spread evenly in a parchment-lined loaf pan and sprinkled with coarse sugar."
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "text": "Bake for 50–60 minutes or until a toothpick inserted into the center comes out clean. Cool in the pan for 20 minutes, then transfer to a wire rack to cool completely.",
+      "media": [
+        {
+          "src": "images/recipes/two_ingredient_pumpkin_bread/step3_1.jpg",
+          "alt": "A freshly baked loaf of pumpkin bread cooling on parchment paper on a wire rack."
+        },
+        {
+          "src": "images/recipes/two_ingredient_pumpkin_bread/step3_2.jpg",
+          "alt": "A sliced loaf of pumpkin bread arranged on parchment paper, showing its moist texture."
+        }
+      ]
+    }
+  ],
+
+  "notes": [
+    "Try adding in a handful of mini chocolate chips or chopped nuts for even more deliciousness!",
+    "Adapted from My Baking Addiction: https://www.mybakingaddiction.com/2-ingredient-pumpkin-bread/"
+  ]
+}
+]
