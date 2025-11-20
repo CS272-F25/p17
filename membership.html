@@ -14,6 +14,8 @@
     
     <body class="m-1">
 
+
+    <!-- Start of header -->
         <header>
             <button id="theme-switch" aria-label="Toggle theme">
                 <svg class='icon-moon' xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
@@ -29,16 +31,21 @@
 
             </div>
         </header>
+    <!-- End of header -->
 
+
+ <!-- Membership Information Section -->
         <section id="membership_info"> 
+       
             <h1 class="mb-4"> Membership </h1>
                 <p> Did you like the experience you had on this website? Check out UW Madison's Baking club for more and join the club using the form below! </p>
 
             <h2 class="m-3"> Membership Benefits </h2>
 
                 <p> We offer a baking community for all levels of experience. Whether you are new to baking or a pro, the baking club is a space for you! </p>
+<!-- Membership Benefits Section End -->
 
-
+<!-- Goals, What we do, Rights Buttons -->
 
             <div class="container" id="goals_whatwedo_and_rights"> 
                 <div class="row"> 
@@ -47,17 +54,8 @@
 
                     <div class="d-flex justify-content-center">
                 <h3> <button class="membership_about_buttons" id="goals_button"> Goals </button> </h3>
-                </div>
-
-               
-
-                            
-                                <ul id="membership_goals_list" class="membership_info_lists d-none"> 
-                                    <li> Create a safe space for meeting new people who are also interested in baking </li>
-                                    <li> Develop new friendships </li>
-                                    <li> Stress relief from your classes</li>
-                                    <li> Educate members on new recipes and be an outlet to share baking experiences and stories </li>
-                                </ul>     
+                </div>                
+                    <p id="membership_goals_list" class="membership_info_lists d-none"> We aim to create a safe space for meeting new people who are also interested in baking, develop new friendships, get stress relief from classes, and educate members on new recipes while being an outlet for sharing baking experiences and stories. </p>  
                 </div>
 
 
@@ -66,13 +64,7 @@
                     <div class="d-flex justify-content-center">
                 <h3> <button class="membership_about_buttons" id="what_we_do_button"> What we do </button> </h3>
                 </div>
-                <ul id="membership_what_we_do_list" class="membership_info_lists d-none"> 
-                    <li> Share recipes </li>
-                    <li> Baking potlucks </li>
-                    <li> Social events </li>
-                    <li> Host demos </li>
-                    <li> Friendly baking and decorating competitions </li>
-                </ul>
+                <p id="membership_what_we_do_list" class="membership_info_lists d-none"> As a member, you can expect recipe sharing, potlucks, social events, demos, and friendly baking and decorating competitions. </p>
                 </div>
              
 
@@ -81,25 +73,17 @@
                 <div class="d-flex justify-content-center">
              <h3> <button class="membership_about_buttons" id="rights_button"> Rights </button> </h3>
                 </div>
-             <ul id="membership_rights_list" class="membership_info_lists d-none"> 
-                <li> Eligible to run for Baking Club board </li>
-                <li> Eligible to vote in Baking Club elections </li>
-                <li> Priority for event attendance </li>
-             </ul>
+                <p id="membership_rights_list" class="membership_info_lists d-none"> Members are elgible to run for the baking club board, vote in club elections, and receive priority when signing up for events </p>
              </div>
-
-            
              </div>
              </div>
         </section>
+<!-- Goals, What we do, Rights Buttons End -->
 
 
+<!-- Membership Form Section -->
         <h2 id="membership_form_heading" class="m-3"> Membership Form </h2>
         <section id="membership_form_div" class="p-4">
-             
-
-            
-
                 <div id="membership_form" class="d-flex"> 
 
             <div class="container"> 
@@ -135,34 +119,31 @@
                 <div class="row"> 
                 <label for="dietary_restrictions"> Dietary Restrictions <em> (optional) </em> </label>
                 <input type="text" id="dietary_restrictions" name="dietary_restrictions" placeholder="Please enter any dietary restrictions you may have">
-                </div> 
-                
-            
+                </div>     
             </div>
-               </div>
-            
+               </div>     
         </section>
-
         <div class="d-flex justify-content-center"> 
         <button id="submit_button" class="m-4"> Submit </button>
         </div>
+<!-- Membership Form Section End -->
 
-
+<!-- Leadership Options Section -->
         <section id="leadership_options"> 
             <h2 id="leadership_options_heading" class="m-3"> Leadership Options </h2>
 
+<!-- Leadership Positions Buttons -->
             <div class="container"> 
                 <div class="row">
-
-                    <div class="col"> 
-                        
+                    <div class="col">         
                         <div class="d-flex justify-content-center">
+
                         <h3> <button id="president_button" class="leadershipButtons"> (Co)President </button> </h3>
                         </div>
                         
 
                       <div class="d-flex justify-content-center">
-                        <img src="images/president.jpeg" alt="A graphic of a woman standing at a podium" width="250rem" id="president_image" class="d-flex m-4"/>
+                        <img src="images/president.jpg" alt="A graphic of a woman standing at a podium" width="250rem" id="president_image" class="d-flex m-4 leadership_images"/>
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -180,7 +161,7 @@
                         </div>
 
                         <div class="d-flex justify-content-center"> 
-                        <img src="images/secretary.jpg" alt="graphic of a secretary" width="250rem" id="secretary_image" class="d-flex" /> 
+                        <img src="images/secretary.jpg" alt="graphic of a secretary" width="250rem" id="secretary_image" class="d-flex m-4 leadership_images" /> 
                         </div>
                     
                         <div class="d-flex justify-content-center"> 
@@ -198,7 +179,7 @@
                     </div>
 
                     <div class="d-flex justify-content-center">
-                    <img src="images/finance.jpg" alt="graphic of a finance director" width="250rem" id="finance_image" class="d-flex" /> 
+                    <img src="images/finance.jpg" alt="graphic of money to represent the finance director" width="250rem" id="finance_image" class="d-flex m-4 leadership_images" /> 
                     </div>
 
                     <div class="d-flex justify-content-center">
@@ -207,7 +188,6 @@
                     </p>      
                     </div>              
                 </div>
-
 
 
                 <div class="row">
@@ -219,7 +199,7 @@
                         </div>
 
                             <div class="d-flex justify-content-center">
-                        <img src="images/marketing.jpg" alt = "graphic representing a marketing manager" width="250rem" id="marketing_image" class="d-flex" />
+                        <img src="images/marketing.jpg" alt = "graphic of a camera to represent marketing director" width="250rem" id="marketing_image" class="d-flex m-4 leadership_images" />
                             </div>
 
                             <div class="d-flex justify-content-center">
@@ -236,7 +216,7 @@
                         </div>
 
                         <div class="d-flex justify-content-center">
-                        <img src="images/programming.jpg" alt="graphic representing a programming leader" width="250rem" id="programming_image" class="d-flex" />
+                        <img src="images/programming.jpg" alt="graphic representing a programming leader" width="250rem" height="250rem" id="programming_image" class="d-flex m-4 leadership_images" />
                         </div>
 
                             <div class="d-flex justify-content-center">
@@ -247,11 +227,8 @@
                     </div>
                 </div>
             </div>
-
-
-
-
         </section>
+<!-- Leadership Options Section and Buttons End -->
 
 
     </body>
