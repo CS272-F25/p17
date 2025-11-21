@@ -137,6 +137,10 @@ html {
     filter: invert(1);
 }
 
+:root[data-theme="dark"] .brand-logo__text {
+    filter: invert(1);
+}
+
 body {
     background-color: var(--background);
     color: var(--text);
