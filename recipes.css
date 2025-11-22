@@ -9,7 +9,7 @@
 
 .recipes-header .subtitle {
   margin-top: 0.25rem;
-  color: #777;
+  color: var(--text);
   font-size: 0.95rem;
 }
 
