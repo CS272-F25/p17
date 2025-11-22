@@ -4,12 +4,6 @@ body.recipe-page main {
     overflow: visible;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background-color: var(--background);
-  color: var(--text);
-}
 
 /* heading */ 
 
