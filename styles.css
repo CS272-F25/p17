@@ -2,7 +2,7 @@
 :root[data-theme="light"] {
     color-scheme: light;
     --text: #333;
-    --background: #dfd9d8;
+    --background: #E6E6E6;
     --primary: #8f1126;
     --secondary: #B44446;
     --accent: #FC8F8F;
@@ -40,6 +40,7 @@
     filter: invert(1);
 }
 
+/* Define colors for text on top of white background while in dark mode */
 :root[data-theme="dark"] .recipe-title,
 :root[data-theme="dark"] .tag-chip,
 :root[data-theme="dark"] .meta-chip {
