@@ -7,7 +7,7 @@ class MyHeader extends HTMLElement {
                 <nav class="navbar navbar-expand-lg custom-nav">
                     <div class="container-fluid">
                         <a class="navbar-brand brand-logo" href="index.html">
-                            <img src="club-logo.png" alt="Baking Club Logo" class="logo-img">
+                            <img src="images/club-logo.png" alt="Baking Club Logo" class="logo-img">
                                 <span class="brand-logo__text"> Baking Club</span>
                         </a>
                         <!--Hamburger Menu-->
