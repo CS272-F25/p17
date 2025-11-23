@@ -1,8 +1,36 @@
-.home-header {
+.hero-text{
     text-align: center;
-    padding: 2rem 1rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #E6E6E6;
 }
 
-.home-header h1 {
-    font-size: 1.8rem;
+.hero-text h1 {
+    font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
+    margin-bottom: 0.4rem;
+    color: #E6E6E6;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    max-width: 32rem;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/recipes/chocolate_chip_cookies/step10.jpg);
+
+    min-height: 60vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-main {
+    width: 100%;
+    max-width: none;
 }
