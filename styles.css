@@ -59,6 +59,7 @@ h3,
 h4,
 h5,
 h6,
+.navbar,
 #theme-switch {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -85,11 +86,6 @@ body {
     font-size: 1rem;
 }
 
-body.recipe-page {
-    background-color: var(--background);
-    color: var(--text);
-}
-
 main {
     height: 95%;
     width: 85%;
@@ -108,10 +104,6 @@ h5,
 h6 {
     line-height: normal;
     color: var(--text);
-}
-
-p.recipe-page .step-text {
-    color: var(--surface);
 }
 
 a {
