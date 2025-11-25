@@ -1,7 +1,7 @@
 // Header and Navigation
 class MyHeader extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
             <header class="site-header">
                 <!--Navigation-->
                 <nav class="navbar navbar-expand-lg custom-nav">
@@ -48,27 +48,30 @@ class MyHeader extends HTMLElement {
                     </div>
                 </nav>
             </header>
-            `
-        const navLinkEls = document.querySelectorAll('.nav-link');
-        const windowPathname = window.location.pathname;
-        navLinkEls.forEach(navLinkEl => {
-            const navLinkPathname = new URL(navLinkEl.href).pathname;
+            `;
+    const navLinkEls = document.querySelectorAll(".nav-link");
+    const windowPathname = window.location.pathname;
+    navLinkEls.forEach((navLinkEl) => {
+      const navLinkPathname = new URL(navLinkEl.href).pathname;
 
-            if ((windowPathname === navLinkPathname) || (windowPathname === '/index.html' && navLinkPathname === '/')) {
-                navLinkEl.classList.add('active');
-            }
-        });
-    }
+      if (
+        windowPathname === navLinkPathname ||
+        (windowPathname === "/index.html" && navLinkPathname === "/")
+      ) {
+        navLinkEl.classList.add("active");
+      }
+    });
+  }
 }
-customElements.define('my-header', MyHeader);
+customElements.define("my-header", MyHeader);
 
 class MyFooter extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <footer>
             
         </footer>
-        `
-    }
+        `;
+  }
 }
-customElements.define('my-footer', MyFooter)
+customElements.define("my-footer", MyFooter);
