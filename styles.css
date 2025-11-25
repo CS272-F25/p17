@@ -1,50 +1,50 @@
 /* Light Mode Default Colors */
 :root[data-theme="light"] {
-    color-scheme: light;
-    --text: #333;
-    --background: #E6E6E6;
-    --primary: #8f1126;
-    --secondary: #B44446;
-    --accent: #FC8F8F;
-    --surface: #333;
+  color-scheme: light;
+  --text: #333;
+  --background: #e6e6e6;
+  --primary: #8f1126;
+  --secondary: #b44446;
+  --accent: #fc8f8f;
+  --surface: #333;
 }
 
 /* Dark Mode Default Colors */
 :root[data-theme="dark"] {
-    color-scheme: dark;
-    --text: #eae9fc;
-    --background: #272120;
-    --primary: #db9aa5;
-    --secondary: #ba4a4c;
-    --accent: #720303;
-    --surface: #333;
+  color-scheme: dark;
+  --text: #eae9fc;
+  --background: #272120;
+  --primary: #db9aa5;
+  --secondary: #ba4a4c;
+  --accent: #720303;
+  --surface: #333;
 }
 
 /* Don't display sun icon in light mode */
-:root[data-theme='light'] .icon-sun {
-    display: none;
+:root[data-theme="light"] .icon-sun {
+  display: none;
 }
 
 /* Don't display moon icon in dark mode */
-:root[data-theme='dark'] .icon-moon {
-    display: none;
+:root[data-theme="dark"] .icon-moon {
+  display: none;
 }
 
 /* Invert icon color in dark mode */
 :root[data-theme="dark"] .navbar-toggler-icon {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 /* Invert Website Header color in dark mode */
 :root[data-theme="dark"] .brand-logo__text {
-    filter: invert(1);
+  filter: invert(1);
 }
 
 /* Define colors for text on top of white background while in dark mode */
 :root[data-theme="dark"] .recipe-title,
 :root[data-theme="dark"] .tag-chip,
 :root[data-theme="dark"] .meta-chip {
-    color: var(--surface);
+  color: var(--surface);
 }
 
 /* Smooth Color Theme Transition */
@@ -61,39 +61,40 @@ h5,
 h6,
 .navbar,
 #theme-switch {
-    transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Controls logo and text scaling */
 :root {
-    --brand-scale: clamp(0.9, 1vw / 100 * 10 + 0.9, 1.1);
+  --brand-scale: clamp(0.9, 1vw / 100 * 10 + 0.9, 1.1);
 }
 
 /* Global Reset and Typography */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--text);
-    font-size: 1rem;
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 1rem;
 }
 
 main {
-    height: 95%;
-    width: 85%;
-    overflow: hidden;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  height: 95%;
+  width: 85%;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 h1,
@@ -102,167 +103,174 @@ h3,
 h4,
 h5,
 h6 {
-    line-height: normal;
-    color: var(--text);
+  line-height: normal;
+  color: var(--text);
 }
 
 a {
-    color: var(--text);
-    text-decoration: none;
+  color: var(--text);
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Nav Bar / Header*/
 
 .custom-nav {
-    background: var(--background);
-    border-bottom: 2px solid var(--primary);
-    padding: 0.5rem 1.5rem;
+  background: var(--background);
+  border-bottom: 2px solid var(--primary);
+  padding: 0.5rem 1.5rem;
 }
 
 /* Logo Block */
 .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Base Logo Image Size */
 .logo-img {
-    height: 5rem;
-    width: auto;
+  height: 5rem;
+  width: auto;
 }
 
 /* Logo and Text scaled for Bootstrap navbar */
 
 .navbar .navbar-brand .logo-img {
-    height: calc(3.5rem * var(--brand-scale));
-    width: auto;
+  height: calc(3.5rem * var(--brand-scale));
+  width: auto;
+}
+
+/* Baking Club logo link */
+a.navbar-brand.brand-logo,
+a.navbar-brand.brand-logo:hover,
+a.navbar-brand.brand-logo:focus {
+  text-decoration: none !important;
 }
 
 .navbar .navbar-brand .brand-logo__text {
-    font-weight: 700;
-    font-size: calc(1.5rem * var(--brand-scale));
+  font-weight: 700;
+  font-size: calc(1.5rem * var(--brand-scale));
 }
 
 /* Base logo text style */
 .brand-logo__text {
-    font-size: 1rem;
-    font-weight: bold;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /* Navigation Links under hamburger menu */
 .custom-nav-links {
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 0;
-    gap: 0.5rem;
-    padding-top: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 0;
+  gap: 0.5rem;
+  padding-top: 0;
 }
 
 /* Reset nearby nav-item spacing for mobile */
-.custom-nav-links .nav-item+.nav-item {
-    margin-left: 0;
-    position: static;
+.custom-nav-links .nav-item + .nav-item {
+  margin-left: 0;
+  position: static;
 }
 
 /* Base nav link styles */
 
 .custom-nav .nav-link {
-    position: relative;
-    color: var(--text);
-    font-weight: 600;
-    text-decoration: none;
-    text-align: right;
-    padding: 0.25rem 0;
-    width: 100%;
+  position: relative;
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  text-align: right;
+  padding: 0.25rem 0;
+  width: 100%;
 }
- 
+
 .custom-nav .nav-link.active {
-    color: var(--primary);
+  color: var(--primary);
 }
 
 /* Keep hamburger menu on the right side */
 .custom-nav .navbar-collapse {
-    flex-grow: 0;
-    margin-left: auto;
+  flex-grow: 0;
+  margin-left: auto;
 }
 
 /* Desktop navbar layout */
 @media (min-width: 992px) {
-    /* Align logo and nav links in one row */
-    .custom-nav-links .nav-item+.nav-item {
-        margin-left: 2.5rem;
-        position: relative;
-    } 
-    /* Dots between links */
-    .custom-nav-links .nav-item+.nav-item::before {
-        content: "";
-        position: absolute;
-        left: -1.25rem;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--accent);
-    }
-    /* Pill above active link */
-    .custom-nav .nav-link.active::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -8px;
-        width: 60%;
-        height: 6px;
-        background: var(--primary);
-        border-radius: 999px;
-    }
+  /* Align logo and nav links in one row */
+  .custom-nav-links .nav-item + .nav-item {
+    margin-left: 2.5rem;
+    position: relative;
+  }
+  /* Dots between links */
+  .custom-nav-links .nav-item + .nav-item::before {
+    content: "";
+    position: absolute;
+    left: -1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  /* Pill above active link */
+  .custom-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8px;
+    width: 60%;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 999px;
+  }
 }
 
 /* Navbar toggler (hamburger menu) styling */
 
 .custom-toggler {
-    border-color: var(--primary);
+  border-color: var(--primary);
 }
 
 .navbar-toggler {
-    background: transparent;
+  background: transparent;
 }
 
 .navbar-toggler-icon {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 /* Global button styling (size and color) */
 button,
 .btn {
-    /* background-color: var(--secondary); */
-    /* Accessible sized button */
-    min-height: 44px;
+  /* background-color: var(--secondary); */
+  /* Accessible sized button */
+  min-height: 44px;
 }
 
 /* Theme Switch Button  */
 
 #theme-switch {
-    height: 3rem;
-    width: 3rem;
-    padding: 0;
-    border-radius: 50%;
-    background-color: var(--background);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 200;
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 200;
 }
 
 #theme-switch svg {
-    fill: var(--primary);
+  fill: var(--primary);
 }

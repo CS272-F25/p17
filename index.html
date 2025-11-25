@@ -1,66 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
     <link href="styles.css" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <script src="header-footer.js" defer></script>
     <script type="text/javascript" src="darkmode.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--Global Header and Nav Bar-->
     <my-header></my-header>
     <main class="home-main">
-        <section>
-            <!--  -->
-            <div class="hero-image">
-                <div class="hero-text">
-                    <h1>Baking Club</h1>
-                    <p>Welcome to the Baking Club</p>
-                    <button>Learn More</button>
-                </div>
-                <!-- Links to social media pages -->
-                <div class="hero-social">
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/bakingclub_uw/" aria-label="Visit our Instagram">
-                        <i class="bi bi-instagram" style="color: #E6E6E6;"></i>
-                    </a>
-                    <!-- Tiktok -->
-                    <a href="https://www.tiktok.com/@bakingclub_uw" aria-label="Visit our Tiktok">
-                        <i class="bi bi-tiktok" style="color: #E6E6E6;"></i>
-                    </a>
-                    <a href="https://venmo.com/u/BakingClubUW" aria-label="Visit our Venmo">
-                        <svg width="1rem" height="1rem" viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <style>
-                                    .cls-1 {
-                                        fill: none;
-                                        stroke: #E6E6E6;
-                                        stroke-linecap: round;
-                                        stroke-linejoin: round;
-                                    }
-                                </style>
-                            </defs>
-                            <path class="cls-1"
-                                d="M40.25,4.45a14.26,14.26,0,0,1,2.06,7.8c0,9.72-8.3,22.34-15,31.2H11.91L5.74,6.58,19.21,5.3l3.27,26.24c3.05-5,6.81-12.76,6.81-18.08A14.51,14.51,0,0,0,28,6.94Z" />
-                        </svg>
-                    </a>
-
-                </div>
-            </div>
-        </section>
-
-
+      <section>
+        <!--  -->
+        <div class="hero-image">
+          <div class="hero-text">
+            <h1>Baking Club</h1>
+            <p>Welcome to the Baking Club</p>
+            <a href="membership.html" class="hero-button" aria-label="Learn more about the Baking Club">
+              Learn More
+            </a>
+          </div>
+          <!-- Links to social media pages -->
+          <div class="hero-social">
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/bakingclub_uw/"
+              aria-label="Visit our Instagram"
+            >
+              <i class="bi bi-instagram" style="color: #e6e6e6"></i>
+            </a>
+            <!-- Tiktok -->
+            <a
+              href="https://www.tiktok.com/@bakingclub_uw"
+              aria-label="Visit our Tiktok"
+            >
+              <i class="bi bi-tiktok" style="color: #e6e6e6"></i>
+            </a>
+            <a
+              href="https://venmo.com/u/BakingClubUW"
+              aria-label="Visit our Venmo"
+            >
+              <svg
+                class="venmo-icon"
+                width="1rem"
+                height="1rem"
+                viewBox="0 0 48 48"
+                id="Layer_2"
+                data-name="Layer 2"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <style>
+                    .cls-1 {
+                      fill: none;
+                      stroke: #e6e6e6;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                    }
+                  </style>
+                </defs>
+                <path
+                  class="cls-1"
+                  d="M40.25,4.45a14.26,14.26,0,0,1,2.06,7.8c0,9.72-8.3,22.34-15,31.2H11.91L5.74,6.58,19.21,5.3l3.27,26.24c3.05-5,6.81-12.76,6.81-18.08A14.51,14.51,0,0,0,28,6.94Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
     <my-footer></my-footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
+  </body>
 </html>
