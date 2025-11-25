@@ -18,7 +18,7 @@
   max-width: 32rem;
 }
 
-.hero-text button {
+.hero-text .hero-button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -29,9 +29,10 @@
   cursor: pointer;
 }
 
-.hero-text button:hover {
+.hero-text .hero-button:hover {
   background-color: #555;
   color: white;
+  text-decoration: none;
 }
 
 .hero-image {
