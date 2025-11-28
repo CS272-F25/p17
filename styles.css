@@ -69,7 +69,7 @@ h6,
   --brand-scale: clamp(0.9, 1vw / 100 * 10 + 0.9, 1.1);
 }
 
-/* Global Reset and Typography */
+/* === GLOBAL DEFAULTS AND TYPOGRAPHY === */
 
 * {
   margin: 0;
@@ -85,6 +85,14 @@ body {
   background-color: var(--background);
   color: var(--text);
   font-size: 1rem;
+}
+
+/* Global button styling (size and color) */
+button,
+.btn {
+  /* background-color: var(--secondary); */
+  /* Accessible sized button */
+  min-height: 44px;
 }
 
 main {
@@ -116,7 +124,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Nav Bar / Header*/
+/* === NAVIGATION / HEADER === */
 
 .custom-nav {
   background: var(--background);
@@ -244,14 +252,6 @@ a.navbar-brand.brand-logo:focus {
 
 .navbar-toggler-icon {
   background-color: transparent;
-}
-
-/* Global button styling (size and color) */
-button,
-.btn {
-  /* background-color: var(--secondary); */
-  /* Accessible sized button */
-  min-height: 44px;
 }
 
 /* Theme Switch Button  */

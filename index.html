@@ -9,6 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link href="styles.css" rel="stylesheet" />
+    <link href="recipes.css" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -22,13 +23,17 @@
     <!--Global Header and Nav Bar-->
     <my-header></my-header>
     <main class="home-main">
+      <!--Hero Image and Text-->
       <section>
-        <!--  -->
         <div class="hero-image">
           <div class="hero-text">
             <h1>Baking Club</h1>
             <p>Welcome to the Baking Club</p>
-            <a href="membership.html" class="hero-button" aria-label="Learn more about the Baking Club">
+            <a
+              href="membership.html"
+              class="hero-button"
+              aria-label="Learn more about the Baking Club"
+            >
               Learn More
             </a>
           </div>
@@ -80,8 +85,43 @@
           </div>
         </div>
       </section>
+      <!--Cards?-->
+      <section class="home-recipe-section">
+        <header class="recipes-header">
+          <h2>Recipes</h2>
+          <p class="subtitle">Browse some of our favorite recipes</p>
+        </header>
+        <div
+          id="recipesCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#recipesCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#recipesCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
     </main>
     <my-footer></my-footer>
+    <script src="recipes.js" defer></script>
+    <script src="home-featured.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

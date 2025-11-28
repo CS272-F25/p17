@@ -1,3 +1,4 @@
+/* === HERO SECTION === */
 .hero-text {
   text-align: center;
   position: absolute;
@@ -83,4 +84,11 @@
 
 .hero-social a:hover {
   background: rgba(0, 0, 0, 0.75);
+}
+
+/* === RECIPES CAROUSEL === */
+
+#recipesCarousel .carousel-control-prev-icon,
+#recipesCarousel .carousel-control-next-icon {
+  filter: invert(1);
 }
