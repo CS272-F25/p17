@@ -88,7 +88,69 @@
 
 /* === RECIPES CAROUSEL === */
 
+#recipesCarousel {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding-inline: 3rem;
+}
+
+#recipesCarousel .recipe-card {
+  max-width: 280px;
+  flex: 0 1 260px;
+}
+
+#recipesCarousel .recipes-carousel-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #recipesCarousel .carousel-control-prev-icon,
 #recipesCarousel .carousel-control-next-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  padding: 1rem;
+  background-color: transparent;
+  box-shadow: none;
+  background-size: 50% 50%;
+  background-position: center;
   filter: invert(1);
+}
+
+#recipesCarousel .carousel-control-prev,
+#recipesCarousel .carousel-control-next {
+  opacity: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#recipesCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+#recipesCarousel .carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+  #recipeCarousel .recipe-card {
+    flex: 0 1 42%;
+  }
+}
+
+@media (max-width: 576px) {
+  #recipeCarousel {
+    max-width: 100%;
+    padding-inline: 3rem;
+  }
+
+  #recipeCarousel .recipe-card {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
 }

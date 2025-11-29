@@ -9,22 +9,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const recipes = await res.json();
 
     const featured = recipes.slice(0, 6);
-    const CARDS_PER_SLIDE = 3;
 
-    // featured.forEach((recipe, index) => {
-    //   const item = document.createElement("div");
-    //   item.className = "carousel-item";
-    //   if (index === 0) item.classList.add("active");
+    const isMobile = window.matchMedia("(max-width: 576px)").matches;
+    const CARDS_PER_SLIDE = isMobile ? 1 : 3;
 
-    //   const wrapper = document.createElement("div");
-    //   wrapper.className = "d-flex justify-content-center py-3";
-
-    //   const card = createRecipeCard(recipe);
-
-    //   wrapper.appendChild(card);
-    //   item.appendChild(wrapper);
-    //   carouselInner.appendChild(item);
-    // });
     for (let i = 0; i < featured.length; i += CARDS_PER_SLIDE) {
       const group = featured.slice(i, i + CARDS_PER_SLIDE);
 
