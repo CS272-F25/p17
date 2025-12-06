@@ -1,44 +1,34 @@
-// Start of goals, what we do, and rights clickable buttons
-const goalsButton = document.getElementById("goals_button"); 
-const goalsList = document.getElementById("membership_goals_list"); 
-const whatWeDoButton = document.getElementById("what_we_do_button"); 
-const whatWeDoList = document.getElementById("membership_what_we_do_list"); 
-const rightsButton = document.getElementById("rights_button"); 
-const rightsList = document.getElementById("membership_rights_list"); 
 
+// Botton modal interactivity 
 
-goalsButton.addEventListener("click", () => {
-    if(goalsList.className === "d-none"){
-        goalsList.className = "membership_info_lists"; 
-    }
+function modalInteraction (openButton, modalId, closeButton){
+    const openModalButton = document.getElementById(openButton); 
+    const modalContainer = document.getElementById(modalId);
+    const closeModalButton = document.getElementById(closeButton);
+    const overlayDisplay = document.querySelector(".overlay");
 
-    else {
-        goalsList.className = "d-none"; 
-    }
-})
+    openModalButton.addEventListener("click", () => {
+        modalContainer.classList.add("show"); 
+        overlayDisplay.style.display = "flex";
 
+    });
 
+    closeModalButton.addEventListener("click", () => {
+        modalContainer.classList.remove("show");
+        overlayDisplay.style.display = "none";
+    }); 
+}
 
-whatWeDoButton.addEventListener("click", () => {
-    if(whatWeDoList.className === "d-none"){
-        whatWeDoList.className = "membership_info_lists";
-    }
+modalInteraction("goals_button", "goals_modal_container", "close_goals");
+modalInteraction("what_we_do_button", "what_we_do_modal_container", "close_what_we_do");
+modalInteraction("rights_button", "rights_modal_container", "close_rights");
+modalInteraction("president_button", "president_modal_container", "close_president");
+modalInteraction("secretary_button", "secretary_modal_container", "close_secretary");
+modalInteraction("finance_button", "finance_modal_container", "close_finance");
+modalInteraction("marketing_button", "marketing_modal_container", "close_marketing");
+modalInteraction("programming_button", "programming_modal_container", "close_programming");
 
-    else{
-        whatWeDoList.className = "d-none";
-    }
-})
-
-rightsButton.addEventListener("click", () => {
-    if(rightsList.className === "d-none"){
-        rightsList.className = "membership_info_lists"; 
-    }
-
-    else {
-        rightsList.className = "d-none"; 
-    }
-})
-// End of goals, what we do, and rights clickable buttons
+// End of button modal interactivity 
 
 
 // Start of Membership form functionality 
@@ -77,89 +67,10 @@ membershipFormSubmissionButton.addEventListener("click", () => {
 })
 // End of membership form functionality 
 
-// Leadership options functionality start 
-
-const presidentButton = document.getElementById("president_button"); 
-const presidentResponsibilities = document.getElementById("president_responsibility_list"); 
-const presidentImage = document.getElementById("president_image"); 
 
 
-presidentButton.addEventListener("click", () => {
-    if(presidentResponsibilities.className === "d-none"){
-        presidentResponsibilities.className = "d-flex responsibilities_lists"; 
-        presidentImage.className = "d-none"; 
-    }
-    else {
-        presidentResponsibilities.className = "d-none" 
-        presidentImage.className = "d-flex m-4 leadership_images"; 
-    }
-}) 
-
-const secretaryButton = document.getElementById("secretary_button"); 
-const secretaryResponsibilities = document.getElementById("secretary_responsibility_list"); 
-const secretaryImage = document.getElementById("secretary_image"); 
 
 
-secretaryButton.addEventListener("click", () => {
-    if(secretaryResponsibilities.className === "d-none"){
-        secretaryResponsibilities.className = "d-flex responsibilities_lists"; 
-        secretaryImage.className = "d-none"; 
-    }
-    else {
-        secretaryResponsibilities.className = "d-none" 
-        secretaryImage.className = "d-flex m-4 leadership_images"; 
-    }
-}) 
-
-
-const financeButton = document.getElementById("finance_button"); 
-const financeResponsibilities = document.getElementById("finance_responsibility_list"); 
-const financeImage = document.getElementById("finance_image"); 
-
-
-financeButton.addEventListener("click", () => {
-    if(financeResponsibilities.className === "d-none"){
-        financeResponsibilities.className = "d-flex responsibilities_lists"; 
-        financeImage.className = "d-none"; 
-    }
-    else {
-       financeResponsibilities.className = "d-none" 
-        financeImage.className = "d-flex m-4 leadership_images"; 
-    }
-}) 
-
-
-const marketingButton = document.getElementById("marketing_button"); 
-const marketingResponsibilities = document.getElementById("marketing_responsibility_list"); 
-const marketingImage = document.getElementById("marketing_image"); 
-
-
-marketingButton.addEventListener("click", () => {
-    if(marketingResponsibilities.className === "d-none"){
-        marketingResponsibilities.className = "d-flex responsibilities_lists"; 
-        marketingImage.className = "d-none"; 
-    }
-    else {
-        marketingResponsibilities.className = "d-none" 
-        marketingImage.className = "d-flex m-4 leadership_images"; 
-    }
-}) 
-
-const programmingButton = document.getElementById("programming_button"); 
-const programmingResponsibilities = document.getElementById("programming_responsibility_list"); 
-const programmingImage = document.getElementById("programming_image"); 
-
-
-programmingButton.addEventListener("click", () => {
-    if(programmingResponsibilities.className === "d-none"){
-        programmingResponsibilities.className = "d-flex responsibilities_lists"; 
-        programmingImage.className = "d-none"; 
-    }
-    else {
-        programmingResponsibilities.className = "d-none" 
-        programmingImage.className = "d-flex m-4 leadership_images";
-    }
-}) 
 
 
 
