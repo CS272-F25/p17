@@ -19,37 +19,62 @@
     <my-header></my-header>
 
 
+    <div class="membership_page"> 
+     <h1> Membership </h1>
+
  <!-- Membership Information Section -->
         <section id="membership_info"> 
        
-            <h1 class="mb-4 mt-4"> Membership </h1>
-                <p> Did you like the experience you had on this website? Check out UW Madison's Baking club for more and join the club using the form below! </p>
+           
+                <p> Did you like the experience you had on this website? Check out UW Madison's Baking club for more information, read through the leadership options if you are interested in taking on a leadership position, and join the club using the form below! </p>
 
             <h2 class="m-3"> Membership Benefits </h2>
 
-                <p> We offer a baking community for all levels of experience. Whether you are new to baking or a pro, the baking club is a space for you! </p>
+                <p> We offer a baking community for all levels of experience. Whether you are new to baking or a pro, the baking club is a space for you. </p>
 <!-- Membership Benefits Section End -->
 
 <!-- Goals, What we do, Rights Buttons -->
+<div class="container" id="goals_whatwedo_and_rights"> 
 
-            <div class="container" id="goals_whatwedo_and_rights"> 
-                <div class="row"> 
+    <div class="row"> 
 
-                <div class="col"> 
+        <div class="col"> 
 
-                    <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
+
                 <h3> <button class="membership_about_buttons" id="goals_button"> Goals </button> </h3>
-                </div>                
-                    <p id="membership_goals_list" class="membership_info_lists d-none"> We aim to create a safe space for meeting new people who are also interested in baking, develop new friendships, get stress relief from classes, and educate members on new recipes while being an outlet for sharing baking experiences and stories. </p>  
+            </div> 
+
+           <div class="overlay"> 
+                <div class="modal_container" id="goals_modal_container"> 
+                    <div class="custom_modal" id="goals_modal"> 
+                        <h3> Goals </h3>
+                        <p> We aim to create a safe space for meeting new people who are also interested in baking, develop new friendships, get stress relief from classes, and educate members on new recipes while being an outlet for sharing baking experiences and stories. </p>
+                    <button class="close" id="close_goals"> Close </button>
+                    </div>
                 </div>
+            </div>
 
 
+        </div>
+                
+
+             
                 <div class="col">
 
                     <div class="d-flex justify-content-center">
                 <h3> <button class="membership_about_buttons" id="what_we_do_button"> What we do </button> </h3>
                 </div>
-                <p id="membership_what_we_do_list" class="membership_info_lists d-none"> As a member, you can expect recipe sharing, potlucks, social events, demos, and friendly baking and decorating competitions. </p>
+
+             
+                <div class="modal_container" id="what_we_do_modal_container"> 
+                    <div class="custom_modal" id="what_we_do_modal"> 
+                        <h3> What we do </h3>
+                        <p> As a member, you can expect recipe sharing, potlucks, social events, demos, and friendly baking and decorating competitions. </p>
+                    <button class="close" id="close_what_we_do"> Close </button>
+                    </div>
+                </div>
+            
                 </div>
              
 
@@ -58,12 +83,138 @@
                 <div class="d-flex justify-content-center">
              <h3> <button class="membership_about_buttons" id="rights_button"> Rights </button> </h3>
                 </div>
-                <p id="membership_rights_list" class="membership_info_lists d-none"> Members are elgible to run for the baking club board, vote in club elections, and receive priority when signing up for events </p>
+
+                <div class="modal_container" id="rights_modal_container"> 
+                    <div class="custom_modal" id="rights_modal"> 
+                        <h3> Rights </h3>
+                        <p> As a member of the UW Madison Baking Club, you have the right to attend all club events, participate in leadership opportunities, vote on club matters, access club resources and materials, and provide feedback to improve the club experience. </p>
+                    <button class="close" id="close_rights"> Close </button>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
              </div>
-             </div>
-             </div>
+
+
+
+                
+    </div>
+    
         </section>
 <!-- Goals, What we do, Rights Buttons End -->
+
+<!-- Leadership Options Section -->
+        <section id="leadership_options"> 
+            <h2 id="leadership_options_heading" class="m-3"> Leadership Options </h2>
+
+            <p> In addition to serving as a general member, you have the potential to take on leadership positions within the club. Please click the buttons below to learn more about each leadership position! </p>
+
+<!-- Leadership Positions Buttons -->
+            <div class="container">
+
+                <div class="row">
+                    <div class="col">         
+                        <div class="d-flex justify-content-center">
+                        <h3> 
+                            <button id="president_button" class="leadershipButtons"> (Co)President </button> 
+                        </h3>
+
+                        <div class="modal_container" id="president_modal_container">   
+                            <div class="custom_modal" id="president_modal"> 
+                                <h3> (Co)President </h3>
+                                <p> Co-president responsibilities include coordinating and leading baking club events and meetings, representing the club, building partnerships with other student organizations, and working closely with the Secretary and Finance director  </p>
+                            <button class="close" id="close_president"> Close </button>
+                            </div>
+                        </div>
+                    </div>   
+                    </div>
+                </div>
+
+
+
+                <div class="row"> 
+                    <div class="col"> 
+
+                        <div class="d-flex justify-content-center"> 
+                <h3> <button id="secretary_button" class="leadershipButtons">  Secretary </button> </h3>
+                        </div>
+
+                        
+                    
+                        <div class="modal_container" id="secretary_modal_container"> 
+                            <div class="custom_modal" id="secretary_modal"> 
+                                <h3> Secretary </h3>
+                                <p> Respnsibilities include maintaining and organizing club meeting notes and agendas, keeping track of membership records and information, assisting in communication and organization, and working closely with the Marketing and Programming positions </p>
+                            <button class="close" id="close_secretary"> Close </button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col">
+                        
+                        <div class="d-flex justify-content-center"> 
+                <h3> <button id="finance_button" class="leadershipButtons"> Finance Director </button> </h3>
+                    </div>
+
+                   <div class="modal_container" id="finance_modal_container"> 
+                        <div class="custom_modal" id="finance_modal"> 
+                            <h3> Finance Director </h3>
+                            <p> Responsibilities include financial responsibility for the bank account, planning fundraisers, managing budgets and proposals, overseeing membership payment, and working closely with the President position(s) </p>
+                        <button class="close" id="close_finance"> Close </button>
+                        </div>
+                   </div>
+                </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col"> 
+
+                        <div class="d-flex justify-content-center">
+                <h3> <button id="marketing_button" class="leadershipButtons"> (Co)Marketing </button>  </h3>
+                        </div>
+
+                           
+
+                           <div class="modal_container" id="marketing_modal_container">
+                            <div class="custom_modal" id="marketing_modal"> 
+                                <h3> (Co)Marketing </h3>
+                                <p> Responsibilities include the creation of event fliers and social media content, brainstorming marketing strategies, event photography, and working closely with the Secretary position </p>
+                            <button class="close" id="close_marketing"> Close </button>
+                           </div>
+                           </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col"> 
+
+                        <div class="d-flex justify-content-center">
+                <h3> <button id="programming_button" class="leadershipButtons"> Programming </button>  </h3>
+                        </div>
+
+                       
+
+                            <div class="modal_container" id="programming_modal_container"> 
+                             <div class="custom_modal" id="programming_modal"> 
+                                  <h3> Programming </h3>
+                                  <p> Responsibilities include regularly updating and maintainig the membership sheet, reserving locations, buying and storing event materials, and creating and managing RSVP forms for events </p>
+                             <button class="close" id="close_programming"> Close </button>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Leadership Options Section and Buttons End -->
 
 
 <!-- Membership Form Section -->
@@ -113,109 +264,9 @@
         </div>
 <!-- Membership Form Section End -->
 
-<!-- Leadership Options Section -->
-        <section id="leadership_options"> 
-            <h2 id="leadership_options_heading" class="m-3"> Leadership Options </h2>
-
-<!-- Leadership Positions Buttons -->
-            <div class="container"> 
-                <div class="row">
-                    <div class="col">         
-                        <div class="d-flex justify-content-center">
-
-                        <h3> <button id="president_button" class="leadershipButtons"> (Co)President </button> </h3>
-                        </div>
-                        
-
-                      <div class="d-flex justify-content-center">
-                        <img src="images/president.jpg" alt="A graphic of a woman standing at a podium" width="250rem" id="president_image" class="d-flex m-4 leadership_images"/>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <p id="president_responsibility_list" class="responsibilities_lists d-none"> Responsibilities including coordinating and leading baking club events and meetings, representing the club, building partnerships 
-                            with other student organizations, and working closely with the Secretary and Finance director
-                        </p>
-                    </div>
-                        
-                    </div>
-
-                    <div class="col"> 
-
-                        <div class="d-flex justify-content-center"> 
-                <h3> <button id="secretary_button" class="leadershipButtons">  Secretary </button> </h3>
-                        </div>
-
-                        <div class="d-flex justify-content-center"> 
-                        <img src="images/secretary.jpg" alt="graphic of a secretary" width="250rem" id="secretary_image" class="d-flex m-4 leadership_images" /> 
-                        </div>
-                    
-                        <div class="d-flex justify-content-center"> 
-                        <p id="secretary_responsibility_list" class="responsibilities_lists d-none"> Responsibilities include maintaining and organizing club meeting notes and agendas, 
-                            keeping track of membership records and information, assisting in communication organization, and working closely with the marketing and programming positions
-                        </p>
-                        </div>
-
-                    </div>
-
-                    <div class="col">
-                        
-                        <div class="d-flex justify-content-center"> 
-                <h3> <button id="finance_button" class="leadershipButtons"> Finance Director </button> </h3>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                    <img src="images/finance.jpg" alt="graphic of money to represent the finance director" width="250rem" id="finance_image" class="d-flex m-4 leadership_images" /> 
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                    <p id="finance_responsibility_list" class="responsibilities_lists d-none"> Responsibilities include financial responsibility for the bank account, planning fundraisers and managing budgets and proposals
-                        overseeing membership payment checks, and working cloesly with the president position
-                    </p>      
-                    </div>              
-                </div>
-
-
-                <div class="row">
-
-                    <div class="col"> 
-
-                        <div class="d-flex justify-content-center">
-                <h3> <button id="marketing_button" class="leadershipButtons"> (Co)Marketing </button>  </h3>
-                        </div>
-
-                            <div class="d-flex justify-content-center">
-                        <img src="images/marketing.jpg" alt="graphic of a camera to represent marketing director" width="250rem" id="marketing_image" class="d-flex m-4 leadership_images" />
-                            </div>
-
-                            <div class="d-flex justify-content-center">
-                        <p id="marketing_responsibility_list" class="responsibilities_lists d-none"> Responsibilities include the creation of event fliers and social media content, brainstorming marketing strategies, event photography, and working 
-                            closely with the secretary
-                        </p>
-                            </div>
-                    </div>
-
-                    <div class="col"> 
-
-                        <div class="d-flex justify-content-center">
-                <h3> <button id="programming_button" class="leadershipButtons"> Programming </button>  </h3>
-                        </div>
-
-                        <div class="d-flex justify-content-center">
-                        <img src="images/programming.jpg" alt="graphic representing a programming leader" width="250rem" height="250rem" id="programming_image" class="d-flex m-4 leadership_images" />
-                        </div>
-
-                            <div class="d-flex justify-content-center">
-                        <p id="programming_responsibility_list" class="responsibilities_lists d-none"> Responsibilities include regularly updating and maintaining the membership sheet, reserving locations 
-                            buying and storing event materials, and creating and managing RSVP forms for events
-                        </p>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- Leadership Options Section and Buttons End -->
 
     <my-footer></my-footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    </div>
+</body>
 </html>
