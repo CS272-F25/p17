@@ -61,6 +61,7 @@ clearPantryButton.addEventListener("click", () => {
     emptyRecipeRecsText.style.display = "flex";
     emptyRecipeRecsText.style.justifyContent = "center";
     noRecipesFoundText.innerText = "";
+    errorText.innerText = "";
 });
 
 
