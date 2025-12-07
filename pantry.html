@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pantry</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+        <link href="styles.css" rel="stylesheet" />
+        <link href="pantry.css" rel="stylesheet" />
+        <link href="recipes.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="header-footer.js" defer></script>
+      <script type="text/javascript" src="darkmode.js" defer></script>
+    <script type="text/javascript" src="recipes.js" defer></script>
+    <script type="text/javascript" src="pantry.js" defer></script>
+    </head>
+    <body> 
+
+           <!--Global Header and Nav Bar-->
+    <my-header></my-header>
+
+
+    <div class="pantry_page"> 
+
+    <h1> Pantry </h1>
+    <p> Welcome to the pantry tool </p>
+
+    <p> Directions: This tool is meant to help you find recipes based on ingredients you currently have in your pantry. 
+        
+        Please only add one ingredient at a time to your pantry list. Either manually input an ingredient or select one from the common ingredients list. Each time you input or select an ingredient, you should select "Update Pantry List". You are welcome to view recipe recommendations each time you update your pantry list, or once you compile your entire list. Do note that the recipe recommendations are inclusive, which means that the more ingredients you include, the more recipes you will be shown, as it searches for any recipe that has an ingredient on your list. Make sure to check spelling before adding to the list </p>
+
+    <!-- Ingredient Selection Tool -->
+    <section id="ingredient_selection"> 
+
+        <div class="container"> 
+            <div class="row"> 
+                <label for="ingredient_input"> Ingredient: </label>
+                <input type="text" id="ingredient_input" name="ingredient_input" placeholder="Enter an ingredient"/>
+            </div>
+        </div>
+
+        <p id="common_ingredients_paragraph"> Or, select from a list of common ingredients below: </p>
+
+        <div class="container"> 
+            <div class="row"> 
+                <select id="common_ingredients_select"> 
+                    <option value=""></option>
+                    <option value="flour">Flour</option>
+                    <option value="sugar">Sugar</option>
+                    <option value="eggs">Eggs</option>
+                    <option value="butter">Butter</option>
+                    <option value="milk">Milk</option>
+                    <option value="baking powder">Baking Powder</option>
+                    <option value="vanilla extract">Vanilla Extract</option>
+                    <option value="chocolate chips">Chocolate Chips</option>
+                    <option value="yeast">Yeast</option>
+                    <option value="salt">Salt</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="button_container"> 
+        <button id="add_to_pantry_button" class="button_design"> Update Pantry List </button>
+        </div>
+
+    </section>  
+
+<!-- Pantry Display Section -->
+    <section id="pantry_display"> 
+        <h2> Your Current Pantry List </h2>
+        <div id="pantry_list_container">
+        <p id="empty_list_text"> <em> Your list is currently empty </em> </p>
+        <p id="error_text"></p>
+        <ul id="pantry_list"></ul>
+        </div>
+
+
+
+
+
+
+
+       
+
+        <div class="container" id="recommendations_and_remove_buttons"> 
+            <div class="row">
+
+                <div class="col d-flex justify-content-center"> 
+        <button id="remove_recent_item_button" class="button_design"> Remove Most Recent Item </button>
+                </div>
+
+                <div class="col d-flex justify-content-center"> 
+        <button id="show_me_recommendations_button" class="button_design"> Show Recipe Recommendations </button>
+                </div>
+
+                
+
+             </div>
+        </div>
+    </section>
+
+
+<!-- Recipe Recommendation Section based on Pantry Ingredients -->
+    <section id="recipe_recommendations"> 
+        <h2> Recipe Recommendations </h2>
+        <p id="empty_recipe_recs_text"> <em> Start adding ingredients to your pantry list to see some recipe recommendations </em></p>
+        <p id="no_recipes_found_text"></p>
+        <div id="recipe_recommendations_grid" class="recipes-grid"></div>    
+    </section>
+
+     <div class="button_container"> 
+    <button id="clear_pantry_button" class="button_design"> Clear Pantry and Recipe Recommendations </button>
+    </div>
+     
+
+    
+
+    </div>
+    
+
+    <my-footer></my-footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
