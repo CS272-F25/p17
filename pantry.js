@@ -14,8 +14,8 @@ const errorText = document.getElementById("error_text");
 const noRecipesFoundText = document.getElementById("no_recipes_found_text");
 let recipes = []; 
 
-
 // Add Individual items to pantry list 
+// Save Pantry List in Local Storage also added 
 addToPantryButton.addEventListener("click", () => {
 
         if (ingredientInput.value === "" && commonIngredientsSelection.value === ""){
@@ -48,27 +48,39 @@ addToPantryButton.addEventListener("click", () => {
                 emptyListText.style.display = "none";
                 errorText.innerText = "";
             }
-        }
+        }  
+
+        const pantryListForStorage = Array.from(pantryList.children).map(li => li.innerText); 
+        const serializedPantryList = JSON.stringify(pantryListForStorage); 
+        localStorage.setItem("pantryList", serializedPantryList);  
 }); 
 
 
 // Clear entire Pantry and Recommendations Button 
+// Also removes the list and saved recommendations from local storage 
 clearPantryButton.addEventListener("click", () => {
-    pantryList.innerHTML = "";
+    pantryList.innerText = "";
     emptyListText.style.display = "flex";
     emptyListText.style.justifyContent = "center";
-    recommendationsGrid.innerHTML = "";
+    recommendationsGrid.innerText = "";
     emptyRecipeRecsText.style.display = "flex";
     emptyRecipeRecsText.style.justifyContent = "center";
     noRecipesFoundText.innerText = "";
     errorText.innerText = "";
+    localStorage.removeItem("pantryList"); 
+    localStorage.removeItem("savedRecipes"); 
+    
 });
 
 
 // Remove Most Recent Item Button
+// Also updates the pantry list and recommendations based on recent item removal 
 removeRecentItemButton.addEventListener("click", async () => {
     pantryList.removeChild(pantryList.lastElementChild);
 
+    const pantryListForStorage = Array.from(pantryList.children).map(li => li.innerText); 
+    const serializedPantryList = JSON.stringify(pantryListForStorage); 
+    localStorage.setItem("pantryList", serializedPantryList); 
 
 
      try {
@@ -89,7 +101,7 @@ removeRecentItemButton.addEventListener("click", async () => {
             }); 
         }); 
 
-        recommendationsGrid.innerHTML = "";
+        recommendationsGrid.innerText = "";
     
             recipesWithIngredient.forEach(recipe => {
                 const card = createRecipeCard(recipe); 
@@ -97,18 +109,20 @@ removeRecentItemButton.addEventListener("click", async () => {
                 emptyRecipeRecsText.style.display = "none"; 
                 noRecipesFoundText.innerText = "";
             }); 
+
+            const recipesSerialized = JSON.stringify(recipesWithIngredient); 
+            localStorage.setItem("savedRecipes", recipesSerialized); 
         }
     
     catch (err) {
         console.error(err);
     }
 
-
-
-
 }); 
 
 
+// Show Recipe Recommendations Button
+// Save Recommended recipes to local storage also added 
 recommendationsButton.addEventListener("click", async () => {
 
     try {
@@ -138,7 +152,7 @@ recommendationsButton.addEventListener("click", async () => {
             }); 
         }); 
 
-        recommendationsGrid.innerHTML = "";
+        recommendationsGrid.innerText = "";
     
             recipesWithIngredient.forEach(recipe => {
                 const card = createRecipeCard(recipe); 
@@ -146,6 +160,9 @@ recommendationsButton.addEventListener("click", async () => {
                 emptyRecipeRecsText.style.display = "none"; 
                 noRecipesFoundText.innerText = "";
             }); 
+
+        const recipesSerialized = JSON.stringify(recipesWithIngredient); 
+        localStorage.setItem("savedRecipes", recipesSerialized);
         }
     
     catch (err) {
@@ -153,6 +170,59 @@ recommendationsButton.addEventListener("click", async () => {
     }
 
 }); 
+
+
+// get and build up pantry list from local storage 
+function getPantryList() {
+    const savedList = localStorage.getItem("pantryList"); 
+    if (!savedList) return; 
+
+    const deserializedList = JSON.parse(savedList); 
+    pantryList.innerText = ""; 
+
+    deserializedList.forEach(ingredient => {
+        const savedIngredient = document.createElement("li"); 
+        savedIngredient.innerText = ingredient; 
+        pantryList.appendChild(savedIngredient); 
+        ingredientInput.value = ""; 
+        errorText.innerText = ""; 
+    })
+
+    if (deserializedList.length > 0 ){
+        emptyListText.style.display = "none"; 
+    }
+}
+
+
+// get and build up recommended recipes from local storage 
+function getRecommendedRecipes() {
+    const savedRecipes = localStorage.getItem("savedRecipes"); 
+    if (!savedRecipes) return; 
+
+    const deserializedRecommendations = JSON.parse(savedRecipes); 
+    recommendationsGrid.innerText = ""; 
+
+    deserializedRecommendations.forEach(recipe => {
+        const card = createRecipeCard(recipe); 
+        recommendationsGrid.appendChild(card); 
+        noRecipesFoundText.innerText = ""; 
+    })
+
+    if (deserializedRecommendations.length > 0){
+        emptyRecipeRecsText.style.display = "none"; 
+    } 
+}
+
+// Load Pantry List and Recommended Recipe Cards 
+document.addEventListener("DOMContentLoaded", () => {
+    getPantryList(); 
+    getRecommendedRecipes(); 
+})
+
+
+
+
+
 
 
 
