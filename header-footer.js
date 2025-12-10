@@ -44,6 +44,9 @@ class MyHeader extends HTMLElement {
                                     <a class="nav-link" href="shopping-list.html">Shopping List</a>
                                 </li>
                                 <li class="nav-item">
+                                    <a class="nav-link" href="convert.html">Convert</a>
+                                </li>
+                                <li class="nav-item">
                                     <a class="nav-link" href="membership.html">Membership</a>
                                 </li>
                             </ul>
