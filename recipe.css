@@ -34,6 +34,33 @@ body.recipe-page main {
   margin: 0.25rem 0 0.4rem;
 }
 
+.coach-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.coach-link-btn:hover {
+  background-color: var(--secondary);
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.coach-link-btn i {
+  font-size: 1.2rem;
+}
+
 .overview-description {
   margin: 0.3rem auto 0;
   max-width: 720px;

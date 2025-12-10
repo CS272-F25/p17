@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Convert</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="convert.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <script src="header-footer.js" defer></script>
+  <script src="darkmode.js" defer></script>
+</head>
+
+<body class="convert-page">
+  <my-header></my-header>
+
+  <header class="convert-header">
+    <h1>Unit Converter</h1>
+    <p class="subtitle">Convert baking units quickly and easily</p>
+  </header>
+
+  <main class="convert-main">
+    <div class="convert-container">
+      <!-- Temperature Converter -->
+      <section class="converter-section">
+        <h2 class="section-title">
+          <i class="bi bi-thermometer-half"></i>
+          Temperature
+        </h2>
+        <div class="converter-box">
+          <div class="converter-input-group">
+            <label for="temp-input">From</label>
+            <input type="number" id="temp-input" class="converter-input" placeholder="Enter value" step="0.1">
+            <select id="temp-from" class="converter-select">
+              <option value="celsius">Celsius (°C)</option>
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+            </select>
+          </div>
+          <button class="swap-btn" id="temp-swap" aria-label="Swap units">
+            <i class="bi bi-arrow-left-right"></i>
+          </button>
+          <div class="converter-input-group">
+            <label for="temp-output">To</label>
+            <input type="number" id="temp-output" class="converter-input" placeholder="Result" readonly>
+            <select id="temp-to" class="converter-select">
+              <option value="fahrenheit">Fahrenheit (°F)</option>
+              <option value="celsius">Celsius (°C)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Weight Converter -->
+      <section class="converter-section">
+        <h2 class="section-title">
+          <i class="bi bi-scale"></i>
+          Weight
+        </h2>
+        <div class="converter-box">
+          <div class="converter-input-group">
+            <label for="weight-input">From</label>
+            <input type="number" id="weight-input" class="converter-input" placeholder="Enter value" step="0.01">
+            <select id="weight-from" class="converter-select">
+              <option value="gram">Gram (g)</option>
+              <option value="kilogram">Kilogram (kg)</option>
+              <option value="ounce">Ounce (oz)</option>
+              <option value="pound">Pound (lb)</option>
+            </select>
+          </div>
+          <button class="swap-btn" id="weight-swap" aria-label="Swap units">
+            <i class="bi bi-arrow-left-right"></i>
+          </button>
+          <div class="converter-input-group">
+            <label for="weight-output">To</label>
+            <input type="number" id="weight-output" class="converter-input" placeholder="Result" readonly>
+            <select id="weight-to" class="converter-select">
+              <option value="ounce">Ounce (oz)</option>
+              <option value="pound">Pound (lb)</option>
+              <option value="gram">Gram (g)</option>
+              <option value="kilogram">Kilogram (kg)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Volume Converter -->
+      <section class="converter-section">
+        <h2 class="section-title">
+          <i class="bi bi-droplet"></i>
+          Liquid Volume
+        </h2>
+        <div class="converter-box">
+          <div class="converter-input-group">
+            <label for="volume-input">From</label>
+            <input type="number" id="volume-input" class="converter-input" placeholder="Enter value" step="0.01">
+            <select id="volume-from" class="converter-select">
+              <option value="milliliter">Milliliter (mL)</option>
+              <option value="liter">Liter (L)</option>
+              <option value="teaspoon">Teaspoon (tsp)</option>
+              <option value="tablespoon">Tablespoon (tbsp)</option>
+              <option value="fluid-ounce">Fluid Ounce (fl oz)</option>
+              <option value="cup">Cup (c)</option>
+              <option value="pint">Pint (pt)</option>
+              <option value="quart">Quart (qt)</option>
+              <option value="gallon">Gallon (gal)</option>
+            </select>
+          </div>
+          <button class="swap-btn" id="volume-swap" aria-label="Swap units">
+            <i class="bi bi-arrow-left-right"></i>
+          </button>
+          <div class="converter-input-group">
+            <label for="volume-output">To</label>
+            <input type="number" id="volume-output" class="converter-input" placeholder="Result" readonly>
+            <select id="volume-to" class="converter-select">
+              <option value="cup">Cup (c)</option>
+              <option value="tablespoon">Tablespoon (tbsp)</option>
+              <option value="teaspoon">Teaspoon (tsp)</option>
+              <option value="fluid-ounce">Fluid Ounce (fl oz)</option>
+              <option value="milliliter">Milliliter (mL)</option>
+              <option value="liter">Liter (L)</option>
+              <option value="pint">Pint (pt)</option>
+              <option value="quart">Quart (qt)</option>
+              <option value="gallon">Gallon (gal)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Length Converter -->
+      <section class="converter-section">
+        <h2 class="section-title">
+          <i class="bi bi-rulers"></i>
+          Length
+        </h2>
+        <div class="converter-box">
+          <div class="converter-input-group">
+            <label for="length-input">From</label>
+            <input type="number" id="length-input" class="converter-input" placeholder="Enter value" step="0.01">
+            <select id="length-from" class="converter-select">
+              <option value="millimeter">Millimeter (mm)</option>
+              <option value="centimeter">Centimeter (cm)</option>
+              <option value="meter">Meter (m)</option>
+              <option value="inch">Inch (in)</option>
+              <option value="foot">Foot (ft)</option>
+            </select>
+          </div>
+          <button class="swap-btn" id="length-swap" aria-label="Swap units">
+            <i class="bi bi-arrow-left-right"></i>
+          </button>
+          <div class="converter-input-group">
+            <label for="length-output">To</label>
+            <input type="number" id="length-output" class="converter-input" placeholder="Result" readonly>
+            <select id="length-to" class="converter-select">
+              <option value="inch">Inch (in)</option>
+              <option value="centimeter">Centimeter (cm)</option>
+              <option value="millimeter">Millimeter (mm)</option>
+              <option value="meter">Meter (m)</option>
+              <option value="foot">Foot (ft)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Baking-Specific Units -->
+      <section class="converter-section">
+        <h2 class="section-title">
+          <i class="bi bi-cake"></i>
+          Baking-Specific
+        </h2>
+        <div class="converter-box">
+          <div class="converter-input-group">
+            <label for="baking-input">From</label>
+            <input type="number" id="baking-input" class="converter-input" placeholder="Enter value" step="0.01">
+            <select id="baking-from" class="converter-select">
+              <option value="stick">Butter Stick</option>
+              <option value="cup-flour">Cup Flour (all-purpose)</option>
+              <option value="cup-sugar">Cup Sugar (granulated)</option>
+              <option value="cup-butter">Cup Butter</option>
+              <option value="cup-milk">Cup Milk</option>
+            </select>
+          </div>
+          <button class="swap-btn" id="baking-swap" aria-label="Swap units">
+            <i class="bi bi-arrow-left-right"></i>
+          </button>
+          <div class="converter-input-group">
+            <label for="baking-output">To</label>
+            <input type="number" id="baking-output" class="converter-input" placeholder="Result" readonly>
+            <select id="baking-to" class="converter-select">
+              <option value="gram">Gram (g)</option>
+              <option value="ounce">Ounce (oz)</option>
+              <option value="cup-flour">Cup Flour</option>
+              <option value="cup-sugar">Cup Sugar</option>
+              <option value="cup-butter">Cup Butter</option>
+              <option value="cup-milk">Cup Milk</option>
+              <option value="stick">Butter Stick</option>
+            </select>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <my-footer></my-footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="convert.js"></script>
+</body>
+</html>
+
