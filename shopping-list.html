@@ -28,40 +28,56 @@
 
     <header class="list-header">
       <h1>Shopping List</h1>
+      <p class="list-instructions">
+        Add ingredients to your shopping list manually or by clicking
+        <em>'Add Ingredients'</em> on a recipe card.
+      </p>
     </header>
 
     <main class="list-page">
-      <section class="todo-section">
-        <div id="myDIV" class="todo-header">
-          <h2>My Shopping List</h2>
-          <input type="text" id="myInput" placeholder="Add an Ingredient..." />
-          <button type="button" class="addBtn">Add</button>
-        </div>
-        <ul id="shopping-UL" class="todo-list">
-          <li>Eggs</li>
-          <li class="checked">Milk</li>
-          <li>Flour</li>
-          <li>Chocolate</li>
-          <li>Pumpkin Puree</li>
-          <li>Waffle Mix</li>
-        </ul>
-      </section>
+      <div class="shopping-layout">
+        <section class="todo-section">
+          <div id="myDIV" class="todo-header">
+            <h2>My Shopping List</h2>
+            <input
+              type="text"
+              id="myInput"
+              placeholder="Add an Ingredient..."
+            />
+            <button type="button" class="addBtn">Add</button>
+          </div>
 
-      <section class="toolbar">
-        <label for="search-input" class="visually-hidden">Search recipes</label>
-        <input id="search-input" class="search-input" placeholder="Search..." />
+          <ul id="shopping-UL" class="todo-list">
+            <li>Eggs</li>
+            <li class="checked">Milk</li>
+            <li>Flour</li>
+            <li>Chocolate</li>
+            <li>Pumpkin Puree</li>
+            <li>Waffle Mix</li>
+          </ul>
+        </section>
+        <section class="recipes-panel">
+          <section class="toolbar">
+            <label for="search-input" class="visually-hidden"
+              >Search recipes</label
+            >
+            <input
+              id="search-input"
+              class="search-input"
+              placeholder="Search..."
+            />
 
-        
-        <label class="favorite-filter">
-          <input type="checkbox" id="show-liked-only" />
-          Favorites only
-        </label>
+            <label class="favorite-filter">
+              <input type="checkbox" id="show-liked-only" />
+              Favorites only
+            </label>
 
-        <div id="tag-filter" class="tag-filter"></div>
-      </section>
+            <div id="tag-filter" class="tag-filter"></div>
+          </section>
 
-      <section id="recipes-grid" class="recipes-grid"></section>
-
+          <section id="recipes-grid" class="recipes-grid"></section>
+        </section>
+      </div>
       <p>
         This page is in progress and will be dependent on us finishing the
         recipes and pantry pages!
