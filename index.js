@@ -9,7 +9,6 @@ async function runGetStarted() {
     const database = client.db("sample_mflix");
     const movies = database.collection("movies");
 
-    // Queries for a movie that has a title value of 'Back to the Future'
     const query = { title: "Back to the Future" };
     const movie = await movies.findOne(query);
 

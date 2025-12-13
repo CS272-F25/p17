@@ -29,7 +29,7 @@ app.post("/api/register", async (req, res) => {
       return res.status(409).json({ error: "Email already registered." });
     }
 
-    const passwordHash = await bcrypt.hash(password, 8);
+    const passwordHash = await bcrypt.hash(password, 10);
 
     const user = await User.create({ email, passwordHash });
 
