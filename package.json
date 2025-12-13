@@ -1,0 +1,29 @@
+{
+  "name": "p17",
+  "version": "1.0.0",
+  "description": "",
+  "main": "darkmode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CS272-F25/p17.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/CS272-F25/p17/issues"
+  },
+  "homepage": "https://github.com/CS272-F25/p17#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "mongoose": "^9.0.0"
+  }
+}
