@@ -2,6 +2,9 @@
   max-width: 1100px;
   margin: 1.5rem auto 1rem;
   padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -88,13 +91,13 @@
   max-width: 260px;
   margin: 0 auto;
 
-  /* display: flex;
-  flex-direction: column;  */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 
   background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
 
   text-align: center;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -121,6 +124,8 @@
 .recipe-title {
   margin: 0.75rem 0 0.9rem;
   padding: 0 0.75rem;
+  line-height: 1.2;
+  min-height: calc(1.2em * 2);
   font-size: 0.98rem;
   font-weight: 600;
   text-align: center;
@@ -168,14 +173,36 @@
   animation: fav-bounce 0.25s ease;
 }
 
+.list-instructions {
+  align-items: center;
+}
+
+.shopping-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.recipes-panel {
+  min-width: 0;
+}
+
 .todo-section {
-  max-width: 700px;
-  margin: 2rem auto;
+  max-width: 100%;
+  margin: 0;
   padding: 0 1rem 1.5rem;
   background: #ffffff;
   border-radius: 18px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  align-self: start;
+  position: sticky;
+  top: 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .todo-header {
@@ -335,5 +362,20 @@
 
   .recipe-card {
     max-width: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .shopping-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .todo-section {
+    position: static;
+    top: auto;
+  }
+
+  .recipes-panel {
+    width: 100%;
   }
 }

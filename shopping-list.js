@@ -35,6 +35,35 @@ let shoppingList = [];
 
 let RECIPES_DATA = [];
 
+const SHOPPING_STORAGE_KEY = "shoppingList_v1";
+
+function saveShoppingList() {
+  try {
+    localStorage.setItem(SHOPPING_STORAGE_KEY, JSON.stringify(shoppingList));
+  } catch (err) {
+    console.error("Couldn't save shopping list");
+  }
+}
+
+function loadShoppingList() {
+  const raw = localStorage.getItem(SHOPPING_STORAGE_KEY);
+
+  if (!raw) {
+    return false;
+  }
+
+  try {
+    const parse = JSON.parse(raw);
+    if (!Array.isArray(parse)) {
+      return false;
+    }
+    shoppingList = parse;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   const listNode = document.getElementById("shopping-UL");
   const inputNode = document.getElementById("myInput");
@@ -51,7 +80,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   await loadRecipesData();
 
-  bootstrapInitialList(listNode);
+  const loaded = loadShoppingList();
+  if (!loaded) {
+    bootstrapInitialList(listNode);
+    saveShoppingList();
+  }
+
+  //   bootstrapInitialList(listNode);
 
   renderShoppingList(listNode);
 
@@ -95,35 +130,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       injectAddIngredientsButtons(recipesGrid);
     });
     observer.observe(recipesGrid, { childList: true, subtree: true });
-
-    // recipesGrid.addEventListener("click", (event) => {
-    //   const btn = event.target.closest(".add-ingredients-btn");
-    //   if (!btn) {
-    //     return;
-    //   }
-
-    //   event.stopPropagation();
-
-    //   const recipeId = btn.dataset.recipeId;
-    //   if (!recipeId) {
-    //     return;
-    //   }
-
-    //   const isAdded = btn.classList.contains("added");
-
-    //   if (!isAdded) {
-    //     const added = addRecipeToShoppingList(recipeId, listNode);
-    //     if (!added) {
-    //       return;
-    //     }
-    //     btn.classList.add("added");
-    //     btn.textContent = "Remove Ingredients";
-    //   } else {
-    //     removeRecipeFromShoppingList(recipeId, listNode);
-    //     btn.classList.remove("added");
-    //     btn.textContent = "Add ingredients";
-    //   }
-    // });
   }
 });
 
@@ -209,6 +215,7 @@ function handleAddCustomItem(inputNode, listNode) {
   });
 
   inputNode.value = "";
+  saveShoppingList();
   renderShoppingList(listNode);
 }
 
@@ -219,11 +226,13 @@ function toggleItemChecked(key, listNode) {
   }
 
   item.checked = !item.checked;
+  saveShoppingList();
   renderShoppingList(listNode);
 }
 
 function removeItemFromShoppingList(key, listNode) {
   shoppingList = shoppingList.filter((item) => item.key !== key);
+  saveShoppingList();
   renderShoppingList(listNode);
 }
 
@@ -246,7 +255,7 @@ function injectAddIngredientsButtons(recipesGrid) {
     btn.type = "button";
     btn.className = "add-ingredients-btn";
     btn.dataset.recipeId = recipeId;
-    btn.appendChild(document.createTextNode("Add ingredients"));
+    btn.appendChild(document.createTextNode("Add Ingredients"));
 
     btn.addEventListener("click", (event) => {
       event.preventDefault();
@@ -283,6 +292,7 @@ function removeRecipeFromShoppingList(recipeId, listNode) {
       item.source === "recipe" && String(item.recipeId) === String(recipeId)
     );
   });
+  saveShoppingList();
   renderShoppingList(listNode);
 }
 
@@ -333,6 +343,7 @@ function addRecipeToShoppingList(recipeId, listNode) {
     });
   });
 
+  saveShoppingList();
   renderShoppingList(listNode);
   return true;
 }
