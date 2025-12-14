@@ -31,7 +31,9 @@
 }
 
 /* Invert icon color in dark mode */
-:root[data-theme="dark"] .navbar-toggler-icon {
+:root[data-theme="dark"] .navbar-toggler-icon,
+:root[data-theme="dark"] .carousel-control-prev,
+:root[data-theme="dark"] .carousel-control-next {
   filter: invert(1);
 }
 
