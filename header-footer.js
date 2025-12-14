@@ -74,8 +74,17 @@ customElements.define("my-header", MyHeader);
 class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-        <footer>
-            
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/club-logo.png" alt="Baking Club Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Baking Club</span>
+                </div>
+                <div class="footer-cta">
+                    <p class="footer-text">Join our community and start baking today!</p>
+                    <a href="membership.html" class="footer-cta-button">Join Now</a>
+                </div>
+            </div>
         </footer>
         `;
   }
