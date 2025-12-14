@@ -205,7 +205,8 @@ function convert(type, from, to, value) {
     return numValue;
   }
 
-  const typeConversions = conversions[type];
+  const conversionType = type === 'temp' ? 'temperature' : type;
+  const typeConversions = conversions[conversionType];
   if (!typeConversions || !typeConversions[from] || !typeConversions[from][to]) {
     return '';
   }
