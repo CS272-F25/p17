@@ -29,7 +29,8 @@
     <header class="list-header">
       <h1>Shopping List</h1>
       <p class="list-instructions">
-        Add ingredients to your shopping list manually or by clicking
+        Add ingredients to your shopping list manually, by searching your pantry
+        items, or by clicking
         <em>'Add Ingredients'</em> on a recipe card.
       </p>
     </header>
@@ -55,6 +56,21 @@
             <li>Pumpkin Puree</li>
             <li>Waffle Mix</li>
           </ul>
+
+          <div class="pantry-search">
+            <h3 class="pantry-title">Search Pantry</h3>
+
+            <label for="pantry-input" class="visually-hidden"
+              >Search Pantry Items</label
+            >
+            <input
+              id="pantry-input"
+              class="pantry-input"
+              type="text"
+              placeholder="Search pantry (i.e. sugar, flour)"
+            />
+          </div>
+          <div id="pantry-results" class="pantry-results"></div>
         </section>
         <section class="recipes-panel">
           <section class="toolbar">

@@ -112,6 +112,8 @@
   position: relative;
   border-radius: 10px;
   aspect-ratio: 4 / 3;
+  flex-shrink: 0;
+  height: 160px;
 }
 
 .recipe-image {
@@ -196,6 +198,7 @@
   margin: 0;
   padding: 0 1rem 1.5rem;
   background: #ffffff;
+  color: var(--surface);
   border-radius: 18px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   align-self: start;
@@ -206,8 +209,12 @@
 }
 
 .todo-header {
-  background-color: #ffb347;
   padding: 20px 24px;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: #ffb347;
   color: #050315;
   text-align: center;
   display: flex;
@@ -220,6 +227,7 @@
 .todo-header h2 {
   margin: 0;
   font-size: 1.3rem;
+  color: var(--surface);
 }
 
 .add-ingredients-btn {
@@ -340,6 +348,71 @@
 .todo-list .close:hover {
   background-color: #f44336;
   color: white;
+}
+
+.pantry-search {
+  padding: 1rem 0.25rem 0;
+  border-top: 1px solid #eee;
+  margin-top: 0.75rem;
+}
+
+.pantry-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  text-align: left;
+  color: var(--surface);
+}
+
+.pantry-input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.pantry-results {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pantry-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.pantry-result-name {
+  font-size: 0.95rem;
+  margin: 0;
+  text-align: left;
+}
+
+.pantry-add-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--surface);
+}
+
+.pantry-add-btn:hover,
+.pantry-add-btn:focus-visible {
+  background: #ffb347;
+  border-color: #ff9800;
+  color: #050315;
+  outline: none;
 }
 
 @keyframes fav-bounce {

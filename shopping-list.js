@@ -32,10 +32,13 @@
 // Will include ability to download checklist
 
 let shoppingList = [];
-
 let RECIPES_DATA = [];
+let PANTRY_DATA = [];
 
 const SHOPPING_STORAGE_KEY = "shoppingList_v1";
+const PANTRY_STORAGE_KEY = "pantryList";
+
+// === LocalStorage Helpers - Shopping List ===
 
 function saveShoppingList() {
   try {
@@ -64,14 +67,48 @@ function loadShoppingList() {
   }
 }
 
+// === LocalStorage Helpers (Pantry Items) ===
+
+function loadPantryListFromStorage() {
+  const raw = localStorage.getItem(PANTRY_STORAGE_KEY);
+  if (!raw) {
+    PANTRY_DATA = [];
+    return;
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) {
+      PANTRY_DATA = [];
+      return;
+    }
+    PANTRY_DATA = parsed
+      .map((x) => String(x || "").trim())
+      .filter((x) => x.length > 0)
+      .map((name) => ({ id: name.toLowerCase(), name: name }));
+  } catch (err) {
+    console.error("Couldn't parse pantry list from localStorage");
+    PANTRY_DATA = [];
+  }
+}
+
+// function loadPantryDataFromStorage() {
+//   const pantryItems = loadPantryList();
+
+//   PANTRY_DATA = pantryItems
+//     .map((val) => String(val || "").trim())
+//     .filter((val) => val.length > 0)
+//     .map((name) => ({
+//       id: name.toLowerCase(),
+//       name: name,
+//     }));
+// }
+
 document.addEventListener("DOMContentLoaded", async () => {
   const listNode = document.getElementById("shopping-UL");
   const inputNode = document.getElementById("myInput");
   const addBtn = document.querySelector(".addBtn");
   const recipesGrid = document.getElementById("recipes-grid");
-  //   const pantrySearch = document.getElementById("pantry-search");
-  //   const pantryResults = document.getElementById("pantry-results");
-  //   const downloadBtn = document.getElementById("download-list");
 
   if (!listNode) {
     console.error("Couldn't find shopping list");
@@ -80,17 +117,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   await loadRecipesData();
 
+  loadPantryListFromStorage();
+
   const loaded = loadShoppingList();
   if (!loaded) {
     bootstrapInitialList(listNode);
     saveShoppingList();
   }
 
-  //   bootstrapInitialList(listNode);
-
   renderShoppingList(listNode);
   syncRecipeButtons();
+  setupPantrySearch(listNode);
 
+  // Add custom item
   if (addBtn && inputNode) {
     addBtn.addEventListener("click", () => {
       handleAddCustomItem(inputNode, listNode);
@@ -104,6 +143,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Toggle complete or remove item
   listNode.addEventListener("click", (event) => {
     const listItem = event.target.closest("li");
     if (!listItem) {
@@ -122,6 +162,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     toggleItemChecked(key, listNode);
+  });
+
+  // Add pantry list changes from other tabs
+  window.addEventListener("storage", (e) => {
+    if (e.key === PANTRY_STORAGE_KEY) {
+      loadPantryListFromStorage();
+
+      const pantryInput = document.getElementById("pantry-input");
+      const pantryResults = document.getElementById("pantry-results");
+      if (pantryInput && pantryResults) {
+        const q = String(pantryInput.value || "")
+          .toLowerCase()
+          .trim();
+      } else {
+        const filtered = filterPantry(q);
+        renderPantryResults(filtered, pantryResults, listNode);
+      }
+    }
   });
 
   if (recipesGrid) {
@@ -144,6 +202,103 @@ async function loadRecipesData() {
     console.error("Failed to load recipes.json for shopping list:", err);
     RECIPES_DATA = [];
   }
+}
+
+function setupPantrySearch(listNode) {
+  const input = document.getElementById("pantry-input");
+  const results = document.getElementById("pantry-results");
+
+  if (!input || !results) {
+    return;
+  }
+
+  renderPantryMessage(results, "Start typing to search Pantry items.");
+
+  input.addEventListener("input", () => {
+    const q = (input.value || "").toLowerCase().trim();
+
+    if (!q) {
+      renderPantryMessage(results, "Start typing to search Pantry items.");
+      return;
+    }
+
+    const filtered = PANTRY_DATA.filter((it) => {
+      const name = String(it.name || it.label || it.title || "").toLowerCase();
+      return name.includes(q);
+    });
+    renderPantryResults(filtered, results, listNode);
+  });
+}
+
+function renderPantryMessage(resultsNode, message) {
+  clearElement(resultsNode);
+
+  const p = document.createElement("p");
+  p.textContent = message;
+  p.style.margin = "0.25rem 0 0 ";
+  resultsNode.appendChild(p);
+}
+
+function renderPantryResults(items, resultsNode, listNode) {
+  clearElement(resultsNode);
+
+  if (!items.length) {
+    renderPantryMessage(resultsNode, "No Pantry items found.");
+    return;
+  }
+
+  items.slice(0, 8).forEach((item) => {
+    const row = document.createElement("div");
+    row.className = "pantry-result";
+
+    const name = document.createElement("p");
+    name.className = "pantry-result-name";
+    name.textContent = String(
+      item.name || item.label || item.title || ""
+    ).trim();
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "pantry-add-btn";
+    btn.textContent = "Add";
+
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const label = String(item.name || item.label || item.title || "").trim();
+      if (!label) {
+        return;
+      }
+
+      addPantryItemToShoppingList(item, label, listNode);
+    });
+
+    row.appendChild(name);
+    row.appendChild(btn);
+    resultsNode.appendChild(row);
+  });
+}
+
+function addPantryItemToShoppingList(item, label, listNode) {
+  const pantryId = item.id != null ? String(item.id) : label.toLowerCase();
+  const key = "pantry:" + pantryId;
+
+  const exists = shoppingList.some((x) => x.key === key);
+  if (exists) {
+    return;
+  }
+
+  shoppingList.push({
+    key: key,
+    label: label,
+    checked: false,
+    source: "pantry",
+    recipeId: null,
+    pantryId: pantryId,
+  });
+
+  saveShoppingList();
+  renderShoppingList(listNode);
 }
 
 function syncRecipeButtons() {
