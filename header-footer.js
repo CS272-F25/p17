@@ -50,6 +50,10 @@ class MyHeader extends HTMLElement {
                                     <a class="nav-link" href="membership.html">Membership</a>
                                 </li>
                             </ul>
+                            <a href="login.html" class="btn login-btn">
+                            <i class="bi bi-person-circle"></i>
+                            <span class="login-text d-none d-xl-inline ms-1">Log In</span>
+                            </a>
                         </div>
                     </div>
                 </nav>
