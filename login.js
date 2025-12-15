@@ -7,6 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const showLoginLink = document.getElementById("show-login");
   const logoutBtn = document.getElementById("logout-btn");
 
+  /* Error or Success Message on Login */
+  function showMessage(text, type = "info") {
+    if (!messageBox) return;
+    messageBox.textContent = text;
+    messageBox.className = `auth-message ${type}`;
+  }
+
   /* === LOGIN / REGISTER toggle */
 
   if (showRegisterLink) {
@@ -23,13 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       loginForm.style.display = "block";
       registerForm.style.display = "none";
     });
-  }
-
-  /* Error or Success Message on Login */
-  function showMessage(text, type = "info") {
-    if (!messageBox) return;
-    messageBox.textContent = text;
-    messageBox.className = `auth-message ${type}`;
   }
 
   const savedUserEmail = localStorage.getItem("userEmail");

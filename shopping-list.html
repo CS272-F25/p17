@@ -25,8 +25,10 @@
   </head>
 
   <body class="m-1 shopping-list-page">
+    <!-- Global Header -->
     <my-header></my-header>
 
+    <!-- Page Header-->
     <header class="list-header">
       <h1>Shopping List</h1>
       <p class="list-instructions">
@@ -37,18 +39,20 @@
     </header>
 
     <main class="list-page">
+      <!-- Shopping List Setup -->
       <div class="shopping-layout">
         <section class="todo-section">
           <div id="myDIV" class="todo-header">
             <h2>My Shopping List</h2>
+            <!-- Shopping List Search and Add Ingredients-->
             <input
               type="text"
               id="myInput"
-              placeholder="Add an Ingredient..."
+              placeholder=" Add an Ingredient..."
             />
             <button type="button" class="addBtn">Add</button>
           </div>
-
+          <!-- List of Items - Base list -->
           <ul id="shopping-UL" class="todo-list">
             <li>Eggs</li>
             <li class="checked">Milk</li>
@@ -58,6 +62,7 @@
             <li>Waffle Mix</li>
           </ul>
 
+          <!-- Pantry Search -->
           <div class="pantry-search">
             <h3 class="pantry-title">Search Pantry</h3>
 
@@ -73,6 +78,7 @@
           </div>
           <div id="pantry-results" class="pantry-results"></div>
         </section>
+        <!-- View and Search Recipes and Add Recipe Ingredients to List -->
         <section class="recipes-panel">
           <section class="toolbar">
             <label for="search-input" class="visually-hidden"
