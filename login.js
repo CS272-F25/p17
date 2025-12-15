@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const savedUserEmail = localStorage.getItem("userEmail");
+  const savedToken = localStorage.getItem("authToken");
 
-  if (savedUserEmail && membersOnlySection) {
+  if (savedUserEmail && savedToken && membersOnlySection) {
     membersOnlySection.style.display = "block";
     showMessage(`Logged in as ${savedUserEmail}`, "success");
   }
@@ -92,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         localStorage.setItem("userEmail", data.user.email);
+        localStorage.setItem("authToken", data.token);
 
         showMessage(`Hello, ${data.user.email}`, "success");
 
@@ -110,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     logoutBtn.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("userEmail");
+      localStorage.removeItem("authToken");
       if (membersOnlySection) membersOnlySection.style.display = "none";
       if (loginForm) loginForm.style.display = "block";
       if (registerForm) registerForm.style.display = "none";
