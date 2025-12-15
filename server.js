@@ -4,11 +4,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const path = require("path");
-const MongoStore = require("connect-mongo");
 const jwt = require("jsonwebtoken");
 
 const User = require("./user");
-const ShoppingList = require("./shoppingList");
 
 const app = express();
 
@@ -31,6 +29,7 @@ function makeToken(user) {
     { expiresIn: "7d" }
   );
 }
+
 function requireAuth(req, res, next) {
   const header = req.headers.authorization || "";
   const [type, token] = header.split(" ");
@@ -101,6 +100,7 @@ app.post("/api/login", async (req, res) => {
 
     res.json({
       message: "Login successful",
+      token,
       user: { id: user._id, email: user.email },
     });
   } catch (err) {
@@ -112,14 +112,24 @@ app.post("/api/login", async (req, res) => {
 app.put("/api/shopping-list", requireAuth, async (req, res) => {
   try {
     const items = Array.isArray(req.body.items) ? req.body.items : [];
-    const doc = await ShoppingList.findOneAndUpdate(
-      { userId: req.user.id },
-      { $set: { items } },
-      { upsert: true, new: true }
+    const user = await User.findByIdAndUpdate(
+      req.user.id,
+      { shoppingList: items },
+      { new: true }
     );
-    res.json({ items: doc.items });
+    res.json({ items: user.shoppingList });
   } catch (err) {
     console.error("Error saving shopping list");
+    res.status(500).json({ error: "Server error" });
+  }
+});
+
+app.get("/api/shopping-list", requireAuth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+    res.json({ items: user?.shoppingList || [] });
+  } catch (err) {
+    console.error("Error loading shopping list", err);
     res.status(500).json({ error: "Server error" });
   }
 });

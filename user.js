@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const ShoppingItemSchema = new mongoose.Schema(
   {
-    id: { type: String, required: true },
+    key: { type: String, required: true },
     label: { type: String, required: true },
     checked: { type: Boolean, default: false },
     source: {
