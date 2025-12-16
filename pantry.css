@@ -67,7 +67,7 @@ p {
 }
 
 #pantry_list_container {
-    background-color: rgb(189, 132, 33);
+    background-color: rgba(189, 132, 33, 0.392);
     width: 45%; 
     border-style: solid;
     border-color: black;
