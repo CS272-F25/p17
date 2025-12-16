@@ -19,13 +19,13 @@ let recipes = [];
 addToPantryButton.addEventListener("click", () => {
 
         if (ingredientInput.value === "" && commonIngredientsSelection.value === ""){
-            errorText.style.color = "white"; 
+            errorText.style.color = "black"; 
             errorText.innerText = "Please either enter an ingredient or select one from the dropdown menu of common ingredients"; 
             emptyListText.style.display = "none";
         }
 
         if (ingredientInput.value !== "" && commonIngredientsSelection.value !== ""){
-            errorText.style.color = "white"; 
+            errorText.style.color = "black"; 
             errorText.innerText = "Please only enter an ingredient or select one from the dropdown menu of common ingredients, not both"; 
             emptyListText.style.display = "none";
         }
@@ -34,6 +34,7 @@ addToPantryButton.addEventListener("click", () => {
             if (ingredientInput.value !== ""){
                 const newManualIngredient = document.createElement("li");
                 newManualIngredient.innerText = ingredientInput.value;
+                newManualIngredient.style.color = "black";
                 pantryList.append(newManualIngredient);
                 ingredientInput.value = "";
                 emptyListText.style.display = "none";
@@ -43,6 +44,7 @@ addToPantryButton.addEventListener("click", () => {
         else if (commonIngredientsSelection.value !== ""){
                 const newCommonIngredient = document.createElement("li");
                 newCommonIngredient.innerText = commonIngredientsSelection.value.charAt(0).toUpperCase() + commonIngredientsSelection.value.slice(1);
+                newCommonIngredient.style.color = "black";
                 pantryList.append(newCommonIngredient);
                 commonIngredientsSelection.value = "";
                 emptyListText.style.display = "none";
@@ -183,6 +185,7 @@ function getPantryList() {
     deserializedList.forEach(ingredient => {
         const savedIngredient = document.createElement("li"); 
         savedIngredient.innerText = ingredient; 
+        savedIngredient.style.color = "black";
         pantryList.appendChild(savedIngredient); 
         ingredientInput.value = ""; 
         errorText.innerText = ""; 
