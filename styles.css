@@ -186,23 +186,6 @@ a.navbar-brand.brand-logo:focus {
   position: static;
 }
 
-/* Login Button */
-.login-btn {
-  border-radius: 999px;
-  padding: 0.4rem 1.4rem;
-  border: 2px solid var(--primary);
-  background: transparent;
-  color: var(--primary);
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.login-btn:hover {
-  background: var(--primary);
-  color: var(--background);
-}
-
 /* Base nav link styles */
 
 .custom-nav .nav-link {
@@ -258,26 +241,6 @@ a.navbar-brand.brand-logo:focus {
     height: 6px;
     background: var(--primary);
     border-radius: 999px;
-  }
-
-  .login-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 1199.98px) {
-  .login-btn {
-    background: transparent;
-    border: none;
-    padding: 0;
-    box-shadow: none;
-    min-width: auto;
-    align-self: flex-end;
-  }
-
-  .login-btn i {
-    font-size: 1.5rem;
   }
 }
 

@@ -35,156 +35,36 @@ let shoppingList = [];
 let RECIPES_DATA = [];
 let PANTRY_DATA = [];
 
-const GUEST_SHOPPING_KEY = "shoppingList_guest_v1";
+const SHOPPING_STORAGE_KEY = "shoppingList_v1";
 const PANTRY_STORAGE_KEY = "pantryList";
 
-// === API Helpers & Auth ===
-
-function getAuthToken() {
-  return localStorage.getItem("authToken");
-}
-
-function isLoggedIn() {
-  return !!getAuthToken();
-}
-
-async function apiGetShoppingList() {
-  const token = getAuthToken();
-  const res = await fetch("/api/shopping-list", {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-  if (res.status === 401) throw new Error("unauthorized");
-  if (!res.ok) throw new Error(`load_failed_${res.status}`);
-  return res.json();
-}
-
-async function apiSaveShoppingList(items) {
-  const token = getAuthToken();
-  const res = await fetch("/api/shopping-list", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-    },
-    body: JSON.stringify({ items }),
-  });
-  if (res.status === 401) throw new Error("unauthorized");
-  if (!res.ok) throw new Error(`load_failed_${res.status}`);
-  return res.json();
-}
-
-let saveTimer = null;
-function scheduleSave(listNode) {
-  if (saveTimer) clearTimeout(saveTimer);
-  saveTimer = setTimeout(async () => {
-    saveShoppingList(listNode);
-  }, 350);
-}
-
-function loadGuestShoppingList() {
-  const raw = localStorage.getItem(GUEST_SHOPPING_KEY);
-
-  if (!raw) {
-    return null;
-  }
-
-  try {
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) {
-      return null;
-    }
-    return parsed;
-  } catch {
-    return null;
-  }
-}
-
-function saveGuestShoppingList(items) {
-  try {
-    localStorage.setItem(GUEST_SHOPPING_KEY, JSON.stringify(items));
-  } catch (err) {
-    console.error("Couldn't save guest shopping list", err);
-  }
-}
-
-function clearGuestShoppingList() {
-  localStorage.removeItem(GUEST_SHOPPING_KEY);
-}
-
-function mergeShoppingLists(primary, incoming) {
-  const base = Array.isArray(primary) ? [...primary] : [];
-  const seen = new Set(base.map((x) => String(x.key)));
-
-  (incoming || []).forEach((item) => {
-    const k = item && item.key != null ? String(item.key) : "";
-    if (!k) return;
-    if (seen.has(k)) return;
-    seen.add(k);
-    base.push(item);
-  });
-
-  return base;
-}
-
-// If logged in, load from API and merge guest list once
-async function loadShoppingList(listNode) {
-  if (isLoggedIn()) {
-    let serverItems = [];
-    try {
-      const data = await apiGetShoppingList();
-      serverItems = Array.isArray(data.items) ? data.items : [];
-    } catch (err) {
-      console.error("Auth/load error:", err);
-      localStorage.removeItem("authToken");
-      localStorage.removeItem("userEmail");
-      window.location.href = "login.html";
-      return false;
-    }
-
-    const guestItems = loadGuestShoppingList();
-    if (guestItems && guestItems.length) {
-      shoppingList = mergeShoppingLists(serverItems, guestItems);
-      clearGuestShoppingList();
-      try {
-        await apiSaveShoppingList(shoppingList);
-      } catch (err) {
-        console.error("Could not save merged list to server:", err);
-      }
-    } else {
-      shoppingList = serverItems;
-    }
-
-    if (!shoppingList.length) {
-      bootstrapInitialList(listNode);
-      try {
-        await apiSaveShoppingList(shoppingList);
-      } catch (err) {
-        console.error("Could not bootstrap-save list:", err);
-      }
-    }
-
-    return true;
-  }
-
-  const guest = loadGuestShoppingList();
-  if (guest && guest.length) {
-    shoppingList = guest;
-    return true;
-  }
-
-  bootstrapInitialList(listNode);
-  saveGuestShoppingList(shoppingList);
-  return true;
-}
+// === LocalStorage Helpers - Shopping List ===
 
 function saveShoppingList() {
-  if (isLoggedIn()) {
-    apiSaveShoppingList(shoppingList).catch((err) => {
-      console.error("Couldn't save shopping list to server:", err);
-    });
-    return;
+  try {
+    localStorage.setItem(SHOPPING_STORAGE_KEY, JSON.stringify(shoppingList));
+  } catch (err) {
+    console.error("Couldn't save shopping list");
   }
-  saveGuestShoppingList(shoppingList);
+}
+
+function loadShoppingList() {
+  const raw = localStorage.getItem(SHOPPING_STORAGE_KEY);
+
+  if (!raw) {
+    return false;
+  }
+
+  try {
+    const parse = JSON.parse(raw);
+    if (!Array.isArray(parse)) {
+      return false;
+    }
+    shoppingList = parse;
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 // === LocalStorage Helpers (Pantry Items) ===
@@ -212,17 +92,17 @@ function loadPantryListFromStorage() {
   }
 }
 
-function filterPantry(q) {
-  const query = String(q || "")
-    .toLowerCase()
-    .trim();
-  if (!query) return [];
+// function loadPantryDataFromStorage() {
+//   const pantryItems = loadPantryList();
 
-  return PANTRY_DATA.filter((it) => {
-    const name = String(it.name || it.label || it.title || "").toLowerCase();
-    return name.includes(query);
-  });
-}
+//   PANTRY_DATA = pantryItems
+//     .map((val) => String(val || "").trim())
+//     .filter((val) => val.length > 0)
+//     .map((name) => ({
+//       id: name.toLowerCase(),
+//       name: name,
+//     }));
+// }
 
 document.addEventListener("DOMContentLoaded", async () => {
   const listNode = document.getElementById("shopping-UL");
@@ -236,9 +116,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   await loadRecipesData();
+
   loadPantryListFromStorage();
 
-  await loadShoppingList(listNode);
+  const loaded = loadShoppingList();
+  if (!loaded) {
+    bootstrapInitialList(listNode);
+    saveShoppingList();
+  }
 
   renderShoppingList(listNode);
   syncRecipeButtons();
@@ -248,14 +133,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (addBtn && inputNode) {
     addBtn.addEventListener("click", () => {
       handleAddCustomItem(inputNode, listNode);
-      scheduleSave();
     });
 
     inputNode.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
         event.preventDefault();
         handleAddCustomItem(inputNode, listNode);
-        scheduleSave();
       }
     });
   }
@@ -268,46 +151,35 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const key = listItem.dataset.key;
+
     if (!key) {
       return;
     }
 
     if (event.target.classList.contains("close")) {
       removeItemFromShoppingList(key, listNode);
-      scheduleSave();
       return;
     }
 
     toggleItemChecked(key, listNode);
-    scheduleSave();
   });
 
   // Add pantry list changes from other tabs
   window.addEventListener("storage", (e) => {
-    if (e.key !== PANTRY_STORAGE_KEY) {
-      return;
+    if (e.key === PANTRY_STORAGE_KEY) {
+      loadPantryListFromStorage();
+
+      const pantryInput = document.getElementById("pantry-input");
+      const pantryResults = document.getElementById("pantry-results");
+      if (pantryInput && pantryResults) {
+        const q = String(pantryInput.value || "")
+          .toLowerCase()
+          .trim();
+      } else {
+        const filtered = filterPantry(q);
+        renderPantryResults(filtered, pantryResults, listNode);
+      }
     }
-
-    loadPantryListFromStorage();
-
-    const pantryInput = document.getElementById("pantry-input");
-    const pantryResults = document.getElementById("pantry-results");
-    if (!pantryInput || !pantryResults) return;
-
-    const q = String(pantryInput.value || "")
-      .toLowerCase()
-      .trim();
-
-    if (!q) {
-      renderPantryMessage(
-        pantryResults,
-        "Start typing to search Pantry items."
-      );
-      return;
-    }
-
-    const filtered = filterPantry(q);
-    renderPantryResults(filtered, pantryResults, listNode);
   });
 
   if (recipesGrid) {
@@ -399,7 +271,6 @@ function renderPantryResults(items, resultsNode, listNode) {
       }
 
       addPantryItemToShoppingList(item, label, listNode);
-      scheduleSave();
     });
 
     row.appendChild(name);
@@ -426,8 +297,8 @@ function addPantryItemToShoppingList(item, label, listNode) {
     pantryId: pantryId,
   });
 
+  saveShoppingList();
   renderShoppingList(listNode);
-  syncRecipeButtons();
 }
 
 function syncRecipeButtons() {
@@ -525,8 +396,8 @@ function handleAddCustomItem(inputNode, listNode) {
   });
 
   inputNode.value = "";
+  saveShoppingList();
   renderShoppingList(listNode);
-  syncRecipeButtons();
 }
 
 function toggleItemChecked(key, listNode) {
@@ -536,11 +407,13 @@ function toggleItemChecked(key, listNode) {
   }
 
   item.checked = !item.checked;
+  saveShoppingList();
   renderShoppingList(listNode);
 }
 
 function removeItemFromShoppingList(key, listNode) {
   shoppingList = shoppingList.filter((item) => item.key !== key);
+  saveShoppingList();
   renderShoppingList(listNode);
   syncRecipeButtons();
 }
@@ -589,7 +462,6 @@ function injectAddIngredientsButtons(recipesGrid) {
         btn.classList.remove("added");
         btn.textContent = "Add Ingredients";
       }
-      scheduleSave();
     });
 
     card.appendChild(btn);
@@ -602,8 +474,8 @@ function removeRecipeFromShoppingList(recipeId, listNode) {
       item.source === "recipe" && String(item.recipeId) === String(recipeId)
     );
   });
+  saveShoppingList();
   renderShoppingList(listNode);
-  syncRecipeButtons();
 }
 
 function addRecipeToShoppingList(recipeId, listNode) {
@@ -653,15 +525,9 @@ function addRecipeToShoppingList(recipeId, listNode) {
     });
   });
 
+  saveShoppingList();
   renderShoppingList(listNode);
-  syncRecipeButtons();
   return true;
-}
-
-function clearElement(node) {
-  while (node && node.firstChild) {
-    node.removeChild(node.firstChild);
-  }
 }
 
 function formatIngredientLabel(name, amount, unit) {
