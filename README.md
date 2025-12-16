@@ -71,7 +71,7 @@ All HTML pages consistently use **Bootstrap 5.3.3** for responsive design and UI
 All HTML pages link to `styles.css` as the global stylesheet. Additional page-specific stylesheets (e.g., `recipe.css`, `pantry.css`) are used where needed.
 
 ### 4. HTML Pages
-The project contains **9 HTML pages** (exceeding the minimum requirement of 7):
+The project contains **8 HTML pages** (exceeding the minimum requirement of 7):
 - index.html (Homepage)
 - recipes.html (Recipe browsing)
 - recipe.html (Recipe details)
@@ -80,7 +80,6 @@ The project contains **9 HTML pages** (exceeding the minimum requirement of 7):
 - shopping-list.html (Shopping list)
 - convert.html (Unit converter)
 - membership.html (Membership form)
-- login.html (User login)
 
 ### 5. Consistent Navigation Bar
 All pages use a consistent primary navigation bar implemented through the `header-footer.js` custom element (`<my-header>`). The navigation includes links to all major sections of the website.
