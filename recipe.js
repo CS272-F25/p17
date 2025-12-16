@@ -360,12 +360,20 @@ async function loadRecipePage() {
     renderInstructions(recipe);
     renderNotes(recipe);
     setupOutline();
+    setupCoachLink(id);
   } catch (err) {
     console.error(err);
     if (errorEl) {
       errorEl.hidden = false;
       errorEl.textContent = "Failed to load recipe data.";
     }
+  }
+}
+
+function setupCoachLink(recipeId) {
+  const coachLink = document.getElementById("coach-link");
+  if (coachLink && recipeId) {
+    coachLink.href = `coach.html?id=${encodeURIComponent(recipeId)}`;
   }
 }
 
