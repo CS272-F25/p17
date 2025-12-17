@@ -10,6 +10,7 @@
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
+    min-width: 100px;
 }
 
 .membership_about_buttons:hover{
@@ -31,11 +32,11 @@
 }
 
 .custom_modal {
-    background-color: rgb(189, 132, 33);
+    background-color: rgb(151, 106, 29);
     width: 45%; 
     max-height: 100%; 
     max-width: 100%; 
-    min-width: 45%; 
+    min-width: 75%; 
     border-style: solid;
     border-color: black;
     border-width: 5px;
@@ -48,6 +49,7 @@
     justify-content: center;
     text-align: center;
     overflow: auto;
+    color: white;
 }
 
 .custom_modal p{
@@ -63,6 +65,7 @@
     width: 25%; 
     border-radius: 10px;
     margin-top: 2rem;
+    min-width: 80px;
 }
 
 .overlay {
@@ -115,6 +118,7 @@ p{
     background-color: var(--secondary);
     border: solid black 5px;
     border-radius: 18px;
+    min-width: 250px;
 }
 
 #submit_button{
@@ -123,6 +127,7 @@ p{
     border-radius: 18px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
+    min-width: 100px;
 }
 
 #submit_button:hover{
