@@ -55,6 +55,8 @@ class MyHeader extends HTMLElement {
                 </nav>
             </header>
             `;
+
+    // Designate current page as 'active' link
     const navLinkEls = document.querySelectorAll(".nav-link");
     const windowPathname = window.location.pathname;
     navLinkEls.forEach((navLinkEl) => {
@@ -71,6 +73,7 @@ class MyHeader extends HTMLElement {
 }
 customElements.define("my-header", MyHeader);
 
+// Global Footer
 class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
