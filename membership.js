@@ -54,6 +54,7 @@ membershipFormSubmissionButton.addEventListener("click", () => {
         if (membershipForm.className === "d-flex"){
             membershipForm.className = "d-none";
             thankYouForSubmission.innerText = `Thank you for your membership form, ${prospectiveMemberName.value}. We will be in contact soon!`; 
+            thankYouForSubmission.style.color = "white";
             membershipFormDiv.appendChild(thankYouForSubmission); 
             membershipFormSubmissionButton.innerText = "Submit another form"; 
     }
